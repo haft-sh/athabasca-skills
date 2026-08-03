@@ -1,0 +1,7 @@
+interface:
+  display_name: "Athabasca Phase Addition"
+  short_description: "Add a new production phase end to end"
+  default_prompt: "Use $athabasca-phase-addition to add a new phase to Athabasca, keeping schema, API, UI, docs, and tests aligned."
+
+policy:
+  allow_implicit_invocation: true

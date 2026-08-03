@@ -30,7 +30,7 @@ OpenAI's content policy blocks generating images of recognizable real people thr
 - Gemini (`google-gemini`) does NOT share this restriction → ✅ works
 - Seedream (ByteDance models on any provider) does NOT share this restriction → ✅ works
 
-**When the user asks for a character sheet or reference edit of a real person (e.g., George R.R. Martin), use Seedream.** Workflow:
+**When the user asks for a character sheet or reference edit of a real person (e.g., Character A R.R. Martin), use Seedream.** Workflow:
 1. Upload reference photo to Athabasca media → get `asset_id`
 2. Call `POST /api/projects/:slug/generate/image` with `provider=fal-ai`, `model=fal-ai/bytedance/seedream/v4.5/edit`, `referenceAssetIds=["asset_..."]`
 3. Fallback chain if fal Seedream is slow: replicate → byteplus

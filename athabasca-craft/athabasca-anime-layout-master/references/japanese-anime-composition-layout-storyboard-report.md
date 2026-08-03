@@ -92,7 +92,8 @@ Uses
 • Character in the right third looking left: memory, resistance, past.
 Page 1
 
-• Eyes in the upper third: natural close-up.
+
+• Eyes in the upper third: natural close-up.
 • Head on the upper thirds line: classic composition.
 • Small character in the lower third: vulnerability.
 • Important object in the lower third: narrative clue.
@@ -132,7 +133,8 @@ Uses
 • Character in front of a throne, altar, door, or grave.
 Page 2
 
-• Direct confession.
+
+• Direct confession.
 • Uncomfortable shot with a look into the camera.
 • Character surrounded by a symmetrical world.
 
@@ -172,7 +174,8 @@ Uses
 
 Page 3
 
-Variants
+
+Variants
 • Small character to the side + large wall: isolation.
 • Character in right foreground + active background on the left: the outside world calling.
 • Character in shadow on one side + light on the other: moral decision.
@@ -211,7 +214,8 @@ Variants
 
 Page 4
 
-1.5. Guiding lines
+
+1.5. Guiding lines
 Lines lead the viewer's eye.
 
 Types
@@ -250,7 +254,8 @@ Rules
 • In emotion, the posture must read before the face.
 Page 5
 
-Variants
+
+Variants
 • Heroic silhouette against the sky.
 • Silhouette broken by rain or smoke.
 • Small silhouette against giant architecture.
@@ -288,7 +293,8 @@ Midground
 
 Page 6
 
-Main action area.
+
+Main action area.
 Examples:
 • Protagonist.
 • Dialogue.
@@ -325,7 +331,8 @@ Variants
 2.1. Subject low in the frame
 Page 7
 
-Effect
+
+Effect
 • Vulnerability.
 • Smallness.
 • Contemplation.
@@ -364,7 +371,8 @@ Variants
 
 Page 8
 
-• Character jumping from above.
+
+• Character jumping from above.
 • Character suspended in the air.
 • Angel, demon, dragon, or divine figure above.
 
@@ -402,7 +410,8 @@ Variants
 
 Page 9
 
-• Figure among blurred crowd.
+
+• Figure among blurred crowd.
 • Figure behind glass.
 • Reflected figure.
 • Figure in a corner.
@@ -439,7 +448,8 @@ Reading
 
 Page 10
 
-• Character is trapped, but there is an exit.
+
+• Character is trapped, but there is an exit.
 • Contrast between internal blockage and the outside world.
 • The wall functions as a heavy graphic mass.
 
@@ -479,7 +489,8 @@ Variants
 
 Page 11
 
-• Character moving away: loss.
+
+• Character moving away: loss.
 • Corridor twisted by Dutch angle: disorientation.
 • Corridor with vanishing point inside the frame: clear destiny.
 • Corridor with vanishing point outside the frame: naturalism or lateral tension.
@@ -517,7 +528,8 @@ Effect
 
 Page 12
 
-• Collective energy.
+
+• Collective energy.
 • Loss of identity.
 
 Variants
@@ -557,7 +569,8 @@ Variants
 
 Page 13
 
-• Personal objects as psychology.
+
+• Personal objects as psychology.
 • Open door: escape.
 • Closed door: blockage.
 • Character sitting on the floor.
@@ -596,7 +609,8 @@ Variants
 
 Page 14
 
-• Vanishing point behind the villain: concentrated threat.
+
+• Vanishing point behind the villain: concentrated threat.
 • Empty vanishing point: absence.
 • Vanishing point outside the frame: naturalism or tension.
 • Low vanishing point: dominant ground.
@@ -635,7 +649,8 @@ Variants
 Adds vertical convergence.
 Page 15
 
-Effect
+
+Effect
 • Scale.
 • Vertigo.
 • Power.
@@ -674,7 +689,8 @@ Uses
 
 Page 16
 
-• Leg or arm crossing the shot.
+
+• Leg or arm crossing the shot.
 • Enemy's head in foreground and hero small in background.
 
 Effect
@@ -714,7 +730,8 @@ The vanishing point is visible or clearly implied inside the frame.
 
 Page 17
 
-Effect
+
+Effect
 • Clear direction.
 • Destiny.
 • Control.
@@ -753,7 +770,8 @@ Variants
 
 Page 18
 
-• Vanishing point outside right: progress, exit.
+
+• Vanishing point outside right: progress, exit.
 • Vanishing point outside above: monumentality.
 • Vanishing point outside below: fall.
 • Two vanishing points outside: realistic street or interior.
@@ -793,7 +811,8 @@ Variants
 • Vanishing point near upper edge: aggressive architecture.
 Page 19
 
-• Vanishing point near lower edge: fall.
+
+• Vanishing point near lower edge: fall.
 • Close vanishing point + Dutch angle: maximum instability.
 • Close vanishing point behind the character: space drags them.
 • Close vanishing point in front: inevitable destiny.
@@ -833,7 +852,8 @@ Variants
 
 Page 20
 
-5. Horizon line
+
+5. Horizon line
 The horizon line marks the eye level of the camera. It may be visible, invisible, or outside the frame.
 
 5.1. High horizon
@@ -871,7 +891,8 @@ Effect
 Variants
 Page 21
 
-• Low horizon + wide sky: hope.
+
+• Low horizon + wide sky: hope.
 • Low horizon + dark cloud: epic tragedy.
 • Low horizon + villain: dominance.
 • Low horizon + raised sword: shonen icon.
@@ -909,7 +930,8 @@ Variants
 The line may be sea, street, landscape, wall edge, or urban horizon.
 Page 22
 
-Effect
+
+Effect
 • Clear geography.
 • Open world.
 • Stability.
@@ -948,7 +970,8 @@ Effect
 Uses
 Page 23
 
-• Defeat.
+
+• Defeat.
 • Crime scene.
 • Classroom from above.
 • Meeting table.
@@ -988,7 +1011,8 @@ Uses
 
 Page 24
 
-• Giant creature.
+
+• Giant creature.
 • Tower.
 • Castle.
 • Skyscrapers.
@@ -1028,7 +1052,8 @@ Variants
 • Horizon hidden by flat wall: graphic composition.
 Page 25
 
-• Horizon implied by windows: order.
+
+• Horizon implied by windows: order.
 • Horizon implied by shelves: routine.
 • Horizon implied by table: emotional barrier.
 • Horizon implied by floor: high camera.
@@ -1065,7 +1090,8 @@ Effect: cinematic, fragmentary, natural, or chaotic shot.
 
 Page 26
 
-Variants:
+
+Variants:
 • Horizon outside above + vanishing points outside: naturalistic high camera.
 • Horizon outside below + vanishing points outside: naturalistic low camera.
 • Horizon outside + lateral vanishing points: world continues.
@@ -1101,7 +1127,8 @@ Effect
 • Scale.
 Page 27
 
-• Dominance.
+
+• Dominance.
 
 Variants
 • Villain from below.
@@ -1140,7 +1167,8 @@ Variants
 
 Page 28
 
-6.4. Overhead shot
+
+6.4. Overhead shot
 Camera completely from above.
 
 Effect
@@ -1180,7 +1208,8 @@ Variants
 
 Page 29
 
-• Hand toward viewer.
+
+• Hand toward viewer.
 • Transformation seen from the ground.
 • Character stepping near camera.
 • Weapon descending.
@@ -1218,7 +1247,8 @@ Uses
 
 Page 30
 
-• Sensuality.
+
+• Sensuality.
 • Trauma.
 • Obsession.
 
@@ -1258,7 +1288,8 @@ Variants
 • Face covered by hair.
 Page 31
 
-• Face with diagonal shadow.
+
+• Face with diagonal shadow.
 • Half face.
 • Close-up from below.
 • Close-up from above.
@@ -1298,7 +1329,8 @@ Variants
 • Half face covered by door.
 Page 32
 
-• Hands visible on chest.
+
+• Hands visible on chest.
 • Horizon implied by background.
 • Vanishing point outside for naturalness.
 • Vanishing point inside for formal tension.
@@ -1337,7 +1369,8 @@ From head to thighs.
 Uses
 Page 33
 
-• Duel.
+
+• Duel.
 • Preparation.
 • Threat.
 • Shonen.
@@ -1377,7 +1410,8 @@ Uses
 • Initial movement.
 Page 34
 
-Variants
+
+Variants
 • Full figure centered.
 • Lateral figure with long shadow.
 • Small figure in room.
@@ -1416,7 +1450,8 @@ Variants
 
 Page 35
 
-• Group in architecture.
+
+• Group in architecture.
 • Path leading to character.
 • Castle or city as dominant mass.
 • Large interior with isolated character.
@@ -1456,7 +1491,8 @@ Variants
 • Immense forest.
 Page 36
 
-• Cliff.
+
+• Cliff.
 • Sea.
 • Ruins.
 • Cosmic space.
@@ -1495,7 +1531,8 @@ Variants
 
 Page 37
 
-• From behind the victim.
+
+• From behind the victim.
 • With mirror.
 • With weapon in foreground.
 • With hand in foreground.
@@ -1533,7 +1570,8 @@ Variants
 Effect
 Page 38
 
-• Dominance of the observer.
+
+• Dominance of the observer.
 • Vulnerability of the observed.
 • Reading of table, floor, or object between both.
 
@@ -1570,7 +1608,8 @@ Variants
 9. Shot through
 Page 39
 
-Looking through something.
+
+Looking through something.
 
 9.1. Through a door
 Effect
@@ -1609,7 +1648,8 @@ Variants
 
 Page 40
 
-• Camera outside looking in.
+
+• Camera outside looking in.
 • Camera inside looking out.
 • Grid over face.
 • Broken glass.
@@ -1647,7 +1687,8 @@ Effect
 
 Page 41
 
-Variants
+
+Variants
 • Blurred leaves.
 • Branches toward character.
 • Flower foreground, sad character.
@@ -1684,7 +1725,8 @@ Variants
 Tools
 Page 42
 
-• Light contrast.
+
+• Light contrast.
 • Color contrast.
 • Size.
 • Center.
@@ -1723,7 +1765,8 @@ Examples
 11. Drawing components
 Page 43
 
-11.1. Face
+
+11.1. Face
 Variants
 • Detailed eyes, simple mouth.
 • Mouth in shadow.
@@ -1761,7 +1804,8 @@ Variants
 
 Page 44
 
-• Hand slowly closing.
+
+• Hand slowly closing.
 • Child's hand against adult hand.
 
 11.3. Clothing
@@ -1799,7 +1843,8 @@ Variants
 
 Page 45
 
-• Hair floating underwater.
+
+• Hair floating underwater.
 • Hair stuck by rain.
 • Hair against light.
 • Hair cut by edge.
@@ -1836,7 +1881,8 @@ Variants
 
 Page 46
 
-• Left to right: progress.
+
+• Left to right: progress.
 • Right to left: return or resistance.
 • Character entering from edge.
 • Panoramic background.
@@ -1874,7 +1920,8 @@ Effect
 
 Page 47
 
-• Attack.
+
+• Attack.
 • Dynamism.
 • Instability.
 
@@ -1914,7 +1961,8 @@ Variants
 
 Page 48
 
-12.5. Toward camera
+
+12.5. Toward camera
 Effect
 • Threat.
 • Impact.
@@ -1951,7 +1999,8 @@ Variants
 
 Page 49
 
-• Character enters light.
+
+• Character enters light.
 • Character enters darkness.
 • Staircase upward.
 • Long road.
@@ -1989,7 +2038,8 @@ Resources
 
 Page 50
 
-13.2. Action / shonen
+
+13.2. Action / shonen
 Goal
 Energy, clarity, impact.
 
@@ -2027,7 +2077,8 @@ Resources
 
 Page 51
 
-• Eye-level camera.
+
+• Eye-level camera.
 • Medium shots.
 • Wide interiors.
 • Soft asymmetry.
@@ -2067,7 +2118,8 @@ Resources
 
 Page 52
 
-• Objects.
+
+• Objects.
 • Tables as barriers.
 • Low ceiling.
 • Static shot.
@@ -2107,7 +2159,8 @@ Resources
 
 Page 53
 
-• Horizon outside above for surveillance.
+
+• Horizon outside above for surveillance.
 • Horizon outside below for dominant creature.
 
 13.6. Comedy
@@ -2145,7 +2198,8 @@ Resources
 
 Page 54
 
-• Soft foreground.
+
+• Soft foreground.
 • Side light.
 • Medium close-ups.
 • Characters in layers.
@@ -2184,7 +2238,8 @@ Action / energy
 
 Page 55
 
-Loneliness
+
+Loneliness
 • Small character.
 • Negative space.
 • High horizon.
@@ -2223,7 +2278,8 @@ Sadness
 
 Page 56
 
-• Asymmetrical composition.
+
+• Asymmetrical composition.
 
 Joy / happiness
 • Open composition.
@@ -2263,7 +2319,8 @@ Naturalness
 
 Page 57
 
-• No forced symmetry.
+
+• No forced symmetry.
 
 Darkness / threat
 • Black foreground.
@@ -2303,7 +2360,8 @@ Adult / mature
 
 Page 58
 
-• Invisible horizon.
+
+• Invisible horizon.
 • Soft perspective.
 
 Unsettling
@@ -2343,7 +2401,8 @@ Oppressive
 
 Page 59
 
-• Vanishing point inside or close.
+
+• Vanishing point inside or close.
 • Oppressive vanishing point.
 
 15. Quick composition formulas
@@ -2381,7 +2440,8 @@ Page 59
 
 Page 60
 
-4. Separated by door, table, window, or railing.
+
+4. Separated by door, table, window, or railing.
 5. One high with low camera, the other low with high camera.
 6. One illuminated, the other in shadow.
 7. One centered, the other cut off.
@@ -2421,7 +2481,8 @@ Page 60
 14. One with back to the rest.
 Page 61
 
-15. Group divided by architecture.
+
+15. Group divided by architecture.
 16. Factions on both sides.
 17. Leader centered.
 18. Group entering from edge.
@@ -2459,7 +2520,8 @@ C. Space
 
 Page 62
 
-• Does the space continue outside the frame?
+
+• Does the space continue outside the frame?
 • Is the vanishing point inside or outside?
 
 D. Camera
@@ -2499,7 +2561,8 @@ G. Emotion
 
 Page 63
 
-• Vanishing point inside = destiny?
+
+• Vanishing point inside = destiny?
 • Vanishing point outside = invisible world or naturalness?
 
 17. Quick bank by intention
@@ -2537,7 +2600,8 @@ To make it more intimate
 
 Page 64
 
-To make it sadder
+
+To make it sadder
 • High camera.
 • High horizon or outside above.
 • Lots of empty space.
@@ -2575,7 +2639,8 @@ To make it more dynamic
 
 Page 65
 
-• Cut-off bodies.
+
+• Cut-off bodies.
 • Movement from edge.
 • Large foreground.
 • Background with converging lines.
@@ -2617,7 +2682,8 @@ negative space, etc.
 
 Page 66
 
-5. Vanishing point position: inside the frame, outside the frame, close to the edge, or very
+
+5. Vanishing point position: inside the frame, outside the frame, close to the edge, or very
 distant.
 6. If there are several vanishing points, indicate which are inside and which are outside.
 7. Horizon line: visible, invisible but implied, outside above, or outside below.
@@ -2672,5 +2738,6 @@ If you want maturity: soft perspective + asymmetry + restraint.
 
 Page 67
 
-
+
+
 ```

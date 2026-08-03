@@ -71,10 +71,10 @@ Media-only refactor pitfall: do not resurrect deleted storyboard/shot components
 ### Step 5 — Typecheck
 
 ```bash
-cd /home/nrsimha/Sites/athabasca && ~/.bun/bin/bunx tsc --noEmit
+cd <athabasca-repository> && ~/.bun/bin/bunx tsc --noEmit
 ```
 
-**bun not on PATH** — use the full path: `~/.bun/bin/bun` or `/home/nrsimha/.bun/bin/bun`.
+**bun not on PATH** — use the full path: `~/.bun/bin/bun` or `$HOME/.bun/bin/bun`.
 
 ## Known Route ↔ Component Path Mapping
 

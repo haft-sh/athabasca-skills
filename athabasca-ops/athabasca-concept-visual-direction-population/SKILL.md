@@ -5,6 +5,7 @@ triggers:
   - User wants an Athabasca project's concept and visual direction populated from a chat brief
   - Need to turn a commercial/story idea into canonical Athabasca concept + visual_dev backend records
   - Existing project already exists and needs downstream concept artifacts
+version: 1.0.0
 ---
 
 # Athabasca concept + visual-direction population

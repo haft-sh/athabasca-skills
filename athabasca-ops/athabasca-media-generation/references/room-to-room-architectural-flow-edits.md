@@ -51,7 +51,7 @@ curl -sS --max-time 180 -X POST http://localhost:3000/api/projects/:slug/generat
 - **Hard boundaries**: Without explicit "no door or wall" language, GPT Image 2 tends to insert a doorframe or arch at the transition point. Always say the spaces should flow without division.
 - **Drift in the base room**: The model may subtly change wall color, molding style, or floor tone in the base room when it's trying to match the second reference. List preservation anchors explicitly.
 
-## Successful example (George project, May 2026)
+## Successful example (Character A project, May 2026)
 
 Edited `asset_mpqh99zkf3kasmh8` (hallway to living room) → `asset_mpqi2h13s3jy2dof` (hallway to kitchen, fridge on left).
 

@@ -5,6 +5,7 @@ triggers:
   - User wants a character sheet based on attached images or project media
   - Need to preserve likeness/costume continuity without naming protected IP directly
   - Image generator only supports text prompts, or reference-image conditioning is not exposed through the current tool
+version: 1.0.0
 ---
 
 # Reference-to-character-sheet prompting

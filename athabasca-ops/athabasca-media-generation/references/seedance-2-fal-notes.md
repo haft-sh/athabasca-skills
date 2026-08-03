@@ -22,7 +22,7 @@ async function pollStatus(requestId: string, intervalMs = 10000, maxAttempts = 6
       requestId,
       logs: true
     });
-    
+
     if (status.status === "COMPLETED") {
       return await fal.queue.result("fal-ai/seedance-2/image-to-video", { requestId });
     }

@@ -22,7 +22,7 @@ Typical use cases:
 ## Why this path is preferred
 
 A public media URL like:
-- `https://media.wheretoaccess.com/<project-slug>/`
+- `https://media.example.com/<project-slug>/`
 
 is usually not enough to enumerate objects. The Athabasca media API is the canonical source for project media URLs.
 

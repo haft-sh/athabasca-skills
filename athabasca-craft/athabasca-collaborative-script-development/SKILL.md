@@ -6,6 +6,7 @@ triggers:
   - User asks for "director's hat" feedback or creative critique
   - User wants to iterate on dialogue, structure, comedic beats, or visual storytelling
   - User says "help me ideate" or "give me feedback on this concept"
+version: 1.0.0
 ---
 
 # Athabasca Collaborative Script Development
@@ -69,7 +70,7 @@ Use descriptive titles and provenance notes that capture the collaborative natur
 > **The ending needs a stinger.** "Whatever, I'll come in" is a strong last line, but the cut to black feels abrupt. Options:
 > - **Option A:** As the door closes, a notification pops up: *"💡 Tip: Upgrade to Premium for uninterrupted intimacy!"*
 > - **Option B:** The woman's voice glitches mid-sentence as the door closes — revealing she's buffering too
-> 
+>
 > I'd go with A or B. They land the satirical point without overstaying.
 
 ## Shooting Script Structure
@@ -78,10 +79,10 @@ Use descriptive titles and provenance notes that capture the collaborative natur
 # TITLE
 
 ### A Short Film
-**Duration:** ~75 seconds  
-**Format:** First-person POV  
-**Tone:** Satirical comedy  
-**Status:** Shooting Script v1  
+**Duration:** ~75 seconds
+**Format:** First-person POV
+**Tone:** Satirical comedy
+**Status:** Shooting Script v1
 
 ---
 

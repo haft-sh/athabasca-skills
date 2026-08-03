@@ -375,10 +375,10 @@ When a user asks to split a script, scene, or beat into a shot list, use this as
 ```markdown
 ## Shot 001 — Descriptive Shot Title
 
-Subject:  
+Subject:
 Who or what is physically present in the frame. Describe character, wardrobe, props, posture, environment elements, and any important visual state. Keep this mostly noun/condition-driven. Avoid burying the action here unless it is a static pose or state.
 
-Action:  
+Action:
 What changes or happens during the shot. Describe movement, gesture, prop behavior, environmental motion, emotional turn, or the exact suspended moment. This should be the paragraph most directly useful as the generative prompt action layer.
 
 Composition:
@@ -408,10 +408,10 @@ Rules for this template:
 ```markdown
 ## Shot 001 — Miner in Porch Shade — Ash Hanging
 
-Subject:  
+Subject:
 A weary miner leans against a wooden porch post in deep shade, hat brim low over his eyes. His dusty shirt hangs loose, suspenders slack, boots planted without energy. A cigarette glows faintly between his fingers.
 
-Action:  
+Action:
 The ash has grown too long, fragile and pale, holding for one impossible second before it falls. Beyond him, the main street sits bleached and empty in the sun.
 
 Composition:

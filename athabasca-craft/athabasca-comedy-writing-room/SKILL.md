@@ -7,6 +7,7 @@ triggers:
   - User wants to brainstorm comedic premises
   - User wants help developing a satirical or absurdist sketch into an Athabasca production
   - User references Key & Peele, SNL, Kids in the Hall, Ryan Long, Bill Hicks, Norm Macdonald, or 4chan greentext as tonal references
+version: 1.0.0
 ---
 
 # Athabasca Comedy Writing Room

@@ -39,7 +39,7 @@ So if the owner mints a token like:
 {
   "name": "cliphouse",
   "kind": "telegram",
-  "projectScopes": [{ "projectSlug": "gly", "role": "editor" }],
+  "projectScopes": [{ "projectSlug": "the project", "role": "editor" }],
   "operationModes": ["creator"]
 }
 ```

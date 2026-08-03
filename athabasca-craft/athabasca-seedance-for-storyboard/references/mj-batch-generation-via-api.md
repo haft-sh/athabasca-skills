@@ -11,7 +11,7 @@ Discord's `/interactions` endpoint rate-limits rapid submissions. Submitting mul
 ```bash
 #!/bin/bash
 API="http://localhost:3000/api/projects/${PROJECT_SLUG}/generate/image"
-RESULTS_DIR="/home/nrsimha/.hermes/staging/${PROJECT_SLUG}/mj-results"
+RESULTS_DIR="$HOME/.hermes/staging/${PROJECT_SLUG}/mj-results"
 mkdir -p "$RESULTS_DIR"
 
 generate() {
@@ -68,7 +68,7 @@ The Athabasca API `aspectRatio` field accepts only:
 
 For 10+ prompt batches, run as a background process with notification:
 ```bash
-bash scripts/george-mj-batch.sh &
+bash scripts/project-mj-batch.sh &
 # Monitor with:
 process(action="poll", session_id="proc_XXXX")
 ```

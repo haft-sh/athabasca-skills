@@ -14,4 +14,4 @@ The repository deliberately does **not** include a `.hermes/skills` prefix. That
 
 ## Migration provenance
 
-The initial commit is an exact export of the tracked `.hermes/skills` tree from `jplew/athabasca` `origin/master` at `4649719d94142309be752531492f4dba04b13d3e` (2026-08-03). Follow-up changes are reconciled separately so the baseline remains auditable.
+The initial commit is an exact export of the tracked `.hermes/skills` tree from `the maintainer/athabasca` `origin/master` at `4649719d94142309be752531492f4dba04b13d3e` (2026-08-03). Follow-up changes are reconciled separately so the baseline remains auditable.

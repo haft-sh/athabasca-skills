@@ -35,7 +35,7 @@ Say this explicitly in the prompt so GPT Image 2 does not treat all references a
 
 ```bash
 ffmpeg -y \
-  -i 'https://media.wheretoaccess.com/.../shot_003_grid.webp' \
+  -i 'https://media.example.com/.../shot_003_grid.webp' \
   -vf 'crop=iw/2:ih/2:0:0' \
   /tmp/shot_003_grid_top_left.png
 ```

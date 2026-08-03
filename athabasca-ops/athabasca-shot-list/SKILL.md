@@ -1,6 +1,7 @@
 ---
 name: athabasca-shot-list
 description: Use when saving or updating Athabasca project shot lists from structured or markdown shot-list input, and when attaching generated media to specific shots.
+version: 1.0.0
 ---
 
 # Athabasca Shot List Persistence
@@ -107,12 +108,12 @@ From the response, extract entries where `phase === "shot_list"`. The `title` fi
 **Constructing the R2 URL:**
 The `storageKey` field in each asset gives the R2 key. Construct the public URL directly:
 ```
-https://media.wheretoaccess.com/{storageKey}
+https://media.example.com/{storageKey}
 ```
 
 Example:
 - storageKey: `project-slug/generated/act-2-scene-2-shot-list-v1_1778681001581.md`
-- public URL: `https://media.wheretoaccess.com/project-slug/generated/act-2-scene-2-shot-list-v1_1778681001581.md`
+- public URL: `https://media.example.com/project-slug/generated/act-2-scene-2-shot-list-v1_1778681001581.md`
 
 **JSON parsing note:** Responses from `/api/projects/:slug/media` with large asset lists may contain invalid control characters. Use `strict=False` in `json.loads()` or handle with regex extraction for reliability.
 

@@ -5,6 +5,7 @@ triggers:
   - User wants to start a new Athabasca project from chat
   - User provides an image to use as a character/style/reference anchor for a new project
   - Need to seed initial project data and persist inbound media via Athabasca APIs
+version: 1.0.0
 ---
 
 # Athabasca project init + reference attach

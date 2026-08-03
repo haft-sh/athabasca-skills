@@ -3,6 +3,7 @@ name: athabasca-asset-inventory
 description: Generate a Lightroom Classic-inspired HTML asset inventory from a shot breakdown. Outputs a sortable table organized by asset category with shot IDs, descriptions, sequence tags, and thumbnail placeholders. Saved locally and attached to the Athabasca project.
 category: athabasca-ops
 trigger: "create asset inventory based on shot breakdown"
+version: 1.0.0
 ---
 
 # Asset Inventory — Athabasca
@@ -45,13 +46,13 @@ If a likely main recurring character or creature has no character sheet, record 
 
 There are three valid input modes:
 
-**A. Inline text**  
+**A. Inline text**
 If the user provides the shot breakdown text directly in the prompt → use it as-is.
 
-**B. File attachment / local path**  
+**B. File attachment / local path**
 If the user references a local file path or provides an attachment, read it.
 
-**C. Existing Athabasca media asset**  
+**C. Existing Athabasca media asset**
 If the user gives a specific Athabasca media asset ID such as `asset_...`, use the Athabasca media API to fetch that exact document first, then read its `publicUrl` or local cached source.
 
 For ID-driven lookup, prefer:
@@ -152,7 +153,7 @@ Use this exact CSS — it's the Athabasca media UI standard:
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{PROJECT} — Asset Inventory</title>
-<link rel="stylesheet" href="https://media.wheretoaccess.com/shared/styles/athabasca-seedance-prompts-v1.css">
+<link rel="stylesheet" href="https://media.example.com/shared/styles/athabasca-seedance-prompts-v1.css">
 <style>
   body { padding: 1.5rem 2rem 4rem; }
   .inv-header { margin-bottom: 0.25rem; }
@@ -223,7 +224,7 @@ SAVE_PATH=~/.hermes/document_cache/<project>_asset_inventory.html
 # Save the HTML to that path
 
 # Attach to Athabasca via Bun upload:
-cd /home/nrsimha/Sites/athabasca
+cd <athabasca-repository>
 bun -e "
 const fd = new FormData();
 fd.append('phase', 'storyboard');

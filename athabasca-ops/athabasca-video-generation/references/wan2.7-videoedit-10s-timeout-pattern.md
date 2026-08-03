@@ -1,10 +1,10 @@
 # Wan 2.7 video-edit 10s timeout pattern (session note)
 
 ## Context
-Project: `scorpion-accuracy`  
-Flow: normalized `POST /api/projects/:slug/generate/video`  
-Model: `alibaba-cloud/wan2.7-videoedit`  
-Mode: `video-editing`  
+Project: `scorpion-accuracy`
+Flow: normalized `POST /api/projects/:slug/generate/video`
+Model: `alibaba-cloud/wan2.7-videoedit`
+Mode: `video-editing`
 Settings repeatedly tested: `duration=10`, `resolution=720p`, `aspectRatio=landscape`, source video + reference face image.
 
 ## Observed behavior

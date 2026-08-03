@@ -1,6 +1,6 @@
 # Prop Generation Patterns
 
-Learned from George project asset triage (2026-05-29). These patterns apply to any prop close-up shot that needs to match a canonical environment.
+Learned from Character A project asset triage (2026-05-29). These patterns apply to any prop close-up shot that needs to match a canonical environment.
 
 ## Lighting: always match canonical environment
 

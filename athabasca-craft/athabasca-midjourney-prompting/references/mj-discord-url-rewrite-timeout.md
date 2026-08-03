@@ -11,7 +11,7 @@ This can happen when the submitted prompt begins with a project-media URL, for e
 Athabasca submits something like:
 
 ```text
-https://media.wheretoaccess.com/gly/misc/img_1b431c921d4e_1778712118067.jpg wide desert canyon location plate, two roughly hewn stone columns framing a natural vertical gap ... --iw 1.3 --ar 16:9 --v 8.1 --style raw
+https://media.example.com/the project/misc/img_1b431c921d4e_1778712118067.jpg wide desert canyon location plate, two roughly hewn stone columns framing a natural vertical gap ... --iw 1.3 --ar 16:9 --v 8.1 --style raw
 ```
 
 But the returned Discord message may begin with a rewritten short URL:

@@ -9,11 +9,11 @@ Observed durable runtime pattern from the Ubuntu dev box:
 - startup command:
 
 ```bash
-/home/nrsimha/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --insecure --no-open
+$HOME/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --insecure --no-open
 ```
 
 - listener after successful service takeover: `0.0.0.0:9119`
-- Tailscale remote URL: `http://100.84.189.23:9119`
+- Tailscale remote URL: `http://$ATHABASCA_HOST:9119`
 
 ### Important takeover pitfall
 
@@ -35,25 +35,25 @@ ss -ltnp | grep ':9119'
 ## Athabasca app
 
 - user service: `athabasca-dev.service`
-- working directory: `/home/nrsimha/Sites/athabasca`
-- env file: `/home/nrsimha/.config/athabasca/athabasca-dev.env`
+- working directory: `<athabasca-repository>`
+- env file: `$HOME/.config/athabasca/athabasca-dev.env`
 - preflight:
 
 ```bash
-/home/nrsimha/.bun/bin/bun run scripts/check-local-db.ts
+$HOME/.bun/bin/bun run scripts/check-local-db.ts
 ```
 
 - startup command:
 
 ```bash
-/home/nrsimha/.bun/bin/bun --hot src/index.ts
+$HOME/.bun/bin/bun --hot src/index.ts
 ```
 
 - listener observed: `*:3000`
 - package shortcut for restart:
 
 ```bash
-cd /home/nrsimha/Sites/athabasca && bun run restart
+cd <athabasca-repository> && bun run restart
 ```
 
 ## Documentation pattern

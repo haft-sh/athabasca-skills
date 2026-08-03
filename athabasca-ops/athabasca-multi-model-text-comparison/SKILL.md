@@ -44,8 +44,8 @@ Normal usage requires a project slug so artifacts are uploaded through Athabasca
 ```bash
 cd ~/.hermes/hermes-agent
 source venv/bin/activate
-python /home/nrsimha/Sites/athabasca/scripts/run_multi_model_text_compare.py \
-  --project-slug womb-rental \
+python <athabasca-repository>/scripts/run_multi_model_text_compare.py \
+  --project-slug <project-slug> \
   --prompt-file /path/to/prompt.txt
 ```
 

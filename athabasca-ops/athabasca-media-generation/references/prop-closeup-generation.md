@@ -40,10 +40,10 @@ When generating standalone prop images (food, objects, tools) that need to visua
 ## Prompt Template
 
 ```
-Close-up prop shot. [Prop description with exact state/quantity]. 
-[Placement: "resting on/sitting on [specific surface from canonical reference]"]. 
-[Room context: brief description matching canonical reference]. 
-[Lighting: explicit description matching reference lighting characteristics]. 
+Close-up prop shot. [Prop description with exact state/quantity].
+[Placement: "resting on/sitting on [specific surface from canonical reference]"].
+[Room context: brief description matching canonical reference].
+[Lighting: explicit description matching reference lighting characteristics].
 Photorealistic, cinematic, ARRI Alexa quality. No people visible.
 ```
 

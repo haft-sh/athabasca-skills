@@ -59,17 +59,17 @@ Provide table.
 
 ### Top strengths
 
-1. 
-2. 
-3. 
+1.
+2.
+3.
 
 ### Top problems
 
-1. 
-2. 
-3. 
-4. 
-5. 
+1.
+2.
+3.
+4.
+5.
 
 ### Structural diagnosis
 
@@ -120,8 +120,8 @@ For dialogue revisions:
 
 For every major problem, use:
 
-**Problem:**  
-**Why it weakens the draft:**  
-**Fix:**  
-**Example beat or line:**  
+**Problem:**
+**Why it weakens the draft:**
+**Fix:**
+**Example beat or line:**
 **Expected result:**

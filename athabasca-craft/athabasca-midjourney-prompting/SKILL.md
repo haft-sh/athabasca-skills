@@ -550,7 +550,7 @@ Before returning prompts, verify:
 
 11. **Single-message GET is bot-only.** `GET /channels/:id/messages/:msg_id` returns `20002 "Only bots can use this endpoint"` for user tokens. Workaround: fetch `?limit=N` and find the message by ID in the list.
 
-12. **`bun` binary not on PATH in terminal sessions.** Bun is at `~/.bun/bin/bun` but not in `$PATH` for interactive shell sessions. Use the full path: `/home/nrsimha/.bun/bin/bun run scripts/...`.
+12. **`bun` binary not on PATH in terminal sessions.** Bun is at `~/.bun/bin/bun` but not in `$PATH` for interactive shell sessions. Use the full path: `$HOME/.bun/bin/bun run scripts/...`.
 
 13. **Stale grid images returned on sequential generations.** When multiple Midjourney generations run via the Athabasca BYOA provider in quick succession, the Discord message poller may return the *previous* job's grid instead of the new one. This happened because:
   - MJ puts multiple grid messages in the channel
@@ -663,7 +663,7 @@ Poll for upscaled result using the same channel message polling — upscaled mes
 
 11. **Single-message GET is bot-only.** `GET /channels/:id/messages/:msg_id` returns `20002 "Only bots can use this endpoint"` for user tokens. Workaround: fetch `?limit=N` and find the message by ID in the list.
 
-12. **`bun` binary not on PATH in terminal sessions.** Bun is at `~/.bun/bin/bun` but not in `$PATH` for interactive shell sessions. Use the full path: `/home/nrsimha/.bun/bin/bun run scripts/...`.
+12. **`bun` binary not on PATH in terminal sessions.** Bun is at `~/.bun/bin/bun` but not in `$PATH` for interactive shell sessions. Use the full path: `$HOME/.bun/bin/bun run scripts/...`.
 
 13. **Unicode em dashes break MJ poller matching.** Discord strips em dashes (U+2014 `—`, U+2013 `–`, U+2012, U+2015) from prompts before echoing them back in channel messages. The `normalizePromptForMatch` function must map these to regular spaces, otherwise `normalizedContent.includes(normalizedPrompt)` fails and the poller reports a timeout even though MJ successfully generated. Patch `normalizePromptForMatch` with `.replace(/[\u2014\u2013\u2012\u2015]/g, " ")`.
 

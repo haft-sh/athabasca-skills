@@ -6,6 +6,7 @@ triggers:
   - User asks how Athabasca is currently running in production/dev on the Ubuntu box
   - User asks to document actual runtime/service details in the repo
   - Need to confirm whether Hermes dashboard or Athabasca app is reachable over localhost or Tailscale
+version: 1.0.0
 ---
 
 # Athabasca runtime services

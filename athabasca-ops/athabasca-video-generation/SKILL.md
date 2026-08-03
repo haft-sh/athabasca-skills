@@ -29,7 +29,7 @@ Direct provider calls are a temporary discovery/debug fallback only. If a provid
 
 When the user asks to configure a new provider (e.g. Replicate), follow this exact file sequence:
 
-1. **`/home/nrsimha/.config/athabasca/athabasca-dev.env`** — add the API key here (the systemd service's `EnvironmentFile`, NOT the checkout's `.env`)
+1. **`$HOME/.config/athabasca/athabasca-dev.env`** — add the API key here (the systemd service's `EnvironmentFile`, NOT the checkout's `.env`)
 2. **`src/shared/generation-config.ts`** — single file that defines:
    - `generationProviders[]` — add new provider string
    - `generationProviderLabels` — add label
@@ -358,7 +358,7 @@ Only call a provider directly when all are true:
 
 When using a direct fallback, disclose it clearly and avoid creating a provider/model skill unless the user explicitly asks.
 
-**Runtime pitfall**: use `bun -e '...'` for inline scripts, not `bun run -e` (which tries to resolve a script filename and fails). The `@fal-ai/client` package must be installed in the working directory — currently `/home/nrsimha/Sites/athabasca`.
+**Runtime pitfall**: use `bun -e '...'` for inline scripts, not `bun run -e` (which tries to resolve a script filename and fails). The `@fal-ai/client` package must be installed in the working directory — currently `<athabasca-repository>`.
 
 ## Final response style
 

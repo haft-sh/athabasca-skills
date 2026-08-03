@@ -28,7 +28,7 @@ When running i2v comparisons using a storyboard grid as source rather than a sin
 
 ```bash
 # 1. Download grid
-curl -sL "https://media.wheretoaccess.com/project/generated/storyboard-grid.png" -o /tmp/storyboard-grid.png
+curl -sL "https://media.example.com/project/generated/storyboard-grid.png" -o /tmp/storyboard-grid.png
 
 # 2. Check dimensions
 file /tmp/storyboard-grid.png

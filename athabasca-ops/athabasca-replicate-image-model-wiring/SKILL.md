@@ -5,6 +5,7 @@ triggers:
   - User asks to add a new Replicate still-image model to Athabasca
   - A Replicate model slug is uncertain and must be verified before wiring
   - A newly added Replicate image model works in docs but fails in Athabasca runtime
+version: 1.0.0
 ---
 
 # Athabasca Replicate image model wiring

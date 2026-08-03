@@ -8,6 +8,7 @@ triggers:
   - Transferring QMD indexes between machines
   - Configuring Haft reader with QMD backend
   - Building a QMD→Haft bridge service
+version: 1.0.0
 ---
 
 # QMD + Haft Search Deployment

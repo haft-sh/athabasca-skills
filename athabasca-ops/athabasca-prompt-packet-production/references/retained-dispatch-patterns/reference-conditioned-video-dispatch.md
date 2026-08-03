@@ -44,6 +44,6 @@ If continuity or identity fails, mark the asset yellow/non-canonical. Preserve i
 ## Pitfalls
 
 - Do not write “use the prior frame/axis” without attaching the actual persisted frame.
-- Do not rely on an environment, Guardian, or blocking reference to preserve Turbo (or another visible character). Attach that character’s canonical sheet.
+- Do not rely on an environment, the guardian, or blocking reference to preserve Character A (or another visible character). Attach that character’s canonical sheet.
 - Do not allow a blocking-only reference to displace a continuity frame or character identity reference when attachment slots are limited.
 - Do not silently rewrite an approved packet to repair reference omissions; publish a revision/continuation kit first.

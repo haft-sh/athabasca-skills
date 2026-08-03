@@ -31,13 +31,13 @@ When amending shot breakdowns, prompt lists, or other canonical documents in Ath
 
 ```bash
 # Download
-curl -sS -o /tmp/shot-breakdown.md "https://media.wheretoaccess.com/george/misc/existing.md"
+curl -sS -o /tmp/shot-breakdown.md "https://media.example.com/<project-slug>/misc/existing.md"
 
 # Patch
 # (use patch tool for targeted edits)
 
 # Upload new version
-curl -sS -X POST "http://localhost:3000/api/projects/george/media" \
+curl -sS -X POST "http://localhost:3000/api/projects/<project-slug>/media" \
   -F "file=@/tmp/shot-breakdown.md" \
   -F "phase=storyboard" \
   -F "category=misc" \

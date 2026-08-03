@@ -1,6 +1,7 @@
 ---
 name: athabasca-to-haft-migration
 description: Migrate Athabasca project content into a Haft vault or remote Haft site while preserving remote-only media policies and generating import-safe document bundles.
+version: 1.0.0
 ---
 
 # Athabasca to Haft migration
@@ -215,7 +216,7 @@ Observed live failure mode:
 - grant exchange succeeds
 - remote readiness is `remote-target.ready`
 - the exchanged central delegated grant carries `pathPrefixes: [""]`
-- `destination.pathPrefix: "athabasca/gly"` fails with `automation.auth.scope-denied`
+- `destination.pathPrefix: "athabasca/<project-slug>"` fails with `automation.auth.scope-denied`
 - retrying the same remote-only canary with `destination.pathPrefix: ""` succeeds, registers a `remote-only` artifact row, preserves `source_url`/metadata, and writes no local file
 
 Working hypothesis to carry forward:
@@ -262,7 +263,7 @@ A good migration prep should leave behind:
 
 ## References
 
-- `references/gly-migration-example.md` — concrete example, commands, counts, and the HTML-mirror workaround from a real GLY migration prep.
+- `references/the project-migration-example.md` — concrete example, commands, counts, and the HTML-mirror workaround from a real the project migration prep.
 - `references/remote-canary-and-grant-triage.md` — canary-first remote validation, HTML-vs-auth failure classification, and delegated-grant troubleshooting.
 - `references/hosted-destination-readiness.md` — custom-domain/remote identity checks, binary provenance and rollback-safe upgrades, pre-Epic enrollment gaps, and canary order.
 - `references/post-merge-enrollment-dogfood.md` — compatibility matrix and just-in-time authentication sequence for exercising a newly merged enrollment implementation against a real hosted destination.

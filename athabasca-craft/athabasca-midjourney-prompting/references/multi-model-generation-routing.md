@@ -170,7 +170,7 @@ When `referenceAssetIds` is provided with model `openai/gpt-image-2`, the system
 ```
 
 **Pitfall: Content policy is strict.** Fal-ai's content checker for GPT Image 2 will flag:
-- Explicitly naming real people (e.g. "George R.R. Martin")
+- Explicitly naming real people (e.g. "Character A R.R. Martin")
 - Phrases like "this exact person", "use this face", "keep his exact likeness"
 - Descriptions that strongly imply a specific identifiable individual
 

@@ -12,7 +12,7 @@ Keep the fast visual progression. End it at a stable continuity handoff:
 
 ## Helper group
 
-Give the helper a direct name, such as `Group B-Helper — Guardian Monologue and Echo`.
+Give the helper a direct name, such as `Group B-Helper — the guardian Monologue and Echo`.
 
 Include:
 

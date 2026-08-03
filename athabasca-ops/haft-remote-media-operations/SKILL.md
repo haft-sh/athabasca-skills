@@ -1,6 +1,7 @@
 ---
 name: haft-remote-media-operations
 description: Operate Haft remote-only media registration against hosted targets, with real CLI/version verification, canary discipline, and UI-vs-catalog validation.
+version: 1.0.0
 ---
 
 # Haft remote media operations
@@ -59,7 +60,7 @@ Use `clone` when preserving prior reports matters. Use overwrite only with expli
      2. `curl -sL -o /tmp/haft-<ver> "https://releases.haft.sh/releases/v<ver>/haft-v<ver>-bun-linux-x64"`
      3. Verify sha256 matches the manifest
      4. `chmod +x /tmp/haft-<ver> && cp /tmp/haft-<ver> "$(which haft)"`
-   - Alternatively, build from source: `cd /home/nrsimha/Sites/haft/main && git pull && bun run build && bun link` (note: `bun link` may not replace the embedded binary in PATH — verify with `haft version --json` after).
+   - Alternatively, build from source: `cd <destination-repository> && git pull && bun run build && bun link` (note: `bun link` may not replace the embedded binary in PATH — verify with `haft version --json` after).
 
 2. **Verify auth and remote readiness**
    - Run `haft whoami --json`.
@@ -103,7 +104,7 @@ If the upload succeeded but the user cannot find it in the vault browser:
 - do not tell the user to keep drilling into folders if the item has no file-backed node to show
 
 ### Common mismatch: nested path fails, root path works
-If `destination.pathPrefix: "athabasca/gly"` fails but `destination.pathPrefix: ""` works:
+If `destination.pathPrefix: "athabasca/<project-slug>"` fails but `destination.pathPrefix: ""` works:
 - classify this as a **route/path-scope bug**, not a generic upload failure
 - preserve the evidence that remote-only ingest works while the intended path semantics do not
 

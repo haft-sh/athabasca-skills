@@ -87,7 +87,7 @@ curl -sS "http://localhost:3000/api/projects/:slug/media?limit=100" | \
 When showing MJ grid results to the user, **always download and deliver as native media** (`MEDIA:/local/path`), not just as a URL. MJ grids on R2 are WebP format despite `.jpg` extension — download with correct extension:
 
 ```bash
-curl -sS -o /tmp/mj-grid.webp "https://media.wheretoaccess.com/george/generated/..."
+curl -sS -o /tmp/mj-grid.webp "https://media.example.com/<project-slug>/generated/..."
 file /tmp/mj-grid.webp  # verify: RIFF (little-endian) data, Web/P image
 ```
 

@@ -31,7 +31,7 @@ import json, base64, urllib.request
 from pathlib import Path
 
 def load_codex_headers():
-    payload = json.loads(Path('/home/nrsimha/.hermes/auth.json').read_text())
+    payload = json.loads(Path('$HOME/.hermes/auth.json').read_text())
     tokens = payload['providers']['openai-codex']['tokens']
     access = tokens['access_token']
     parts = access.split('.')
@@ -110,9 +110,9 @@ def codex_reference_edit(parts, outpath):
 ```python
 parts = [
     {'type': 'input_text', 'text': 'Reference image 1: composition anchor only.'},
-    {'type': 'input_image', 'image_url': 'https://media.wheretoaccess.com/project/generated/anchor.png'},
+    {'type': 'input_image', 'image_url': 'https://media.example.com/project/generated/anchor.png'},
     {'type': 'input_text', 'text': 'Reference image 2: secondary design detail only.'},
-    {'type': 'input_image', 'image_url': 'https://media.wheretoaccess.com/project/generated/detail.png'},
+    {'type': 'input_image', 'image_url': 'https://media.example.com/project/generated/detail.png'},
     {'type': 'input_text', 'text': 'Create a medium shot preserving the first reference composition while transferring only the design detail from the second reference.'},
 ]
 local_path = codex_reference_edit(parts, '/tmp/project-ref-edits/shot-v1.png')

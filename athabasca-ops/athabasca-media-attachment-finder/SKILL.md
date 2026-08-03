@@ -229,7 +229,7 @@ In the current Athabasca implementation, project media responses include `genera
 ## Pitfalls
 
 - **Never invent API routes.** Before writing an endpoint into a skill — whether it is a lookup path, a mutation, or a parameter — verify it against `src/server/api/routes/` and `src/server/db/schema.ts`. Hypothesizing a route from table names and then hardcoding it in a skill is a reproducible error pattern; it survives across sessions and propagates to every future agent that reads the skill. If a route is not in the route handler file, it does not exist.
-- Do not use ad hoc shell glue (`curl` + `ffmpeg`, `/tmp` staging) for audio extraction or media transformation when a Tier-3 Athabasca API endpoint exists. `POST /api/media/:assetId/derive-audio` is the canonical path for audio extraction: it normalizes to mono 24kHz WAV, creates an MP3 convenience copy, persists to R2, and attaches the result to the project with provenance. Shell-glide bypasses all of that.
+- Do not use ad hoc shell glue (`curl` + `ffmpeg`, `/tmp` staging) for audio extraction or media transformation when a Tier-3 Athabasca API endpoint exists. `POST /api/media/:assetId/derive-audio` is the canonical path for audio extraction: it normalizes to mono 24kHz WAV, creates an MP3 convenience copy, persists to R2, and attaches the result to the project with provenance. Shell-the project bypasses all of that.
 - Do not assume a project has media just because it has a research report.
 - Do not claim a table supports a field unless `schema.ts` shows it.
 - Do not conclude the prompt is missing just because the card UI omits it; verify the API payload and `generation` row first.

@@ -1,6 +1,6 @@
 # SQLite Migration Pitfall: `db:push` Can Wipe Data
 
-**Date:** 2026-05-29  
+**Date:** 2026-05-29
 **Context:** Media ratings/color-tags schema migration on Athabasca
 
 ## The Problem

@@ -5,6 +5,7 @@ triggers:
   - User gives a script, beat sheet, or deleted scene to add to an existing Athabasca project
   - Need to preserve multiple script variants or reference drafts in one canonical script artifact
   - Script artifacts should be written without mutating DB files directly
+version: 1.0.0
 ---
 
 # Athabasca script source intake

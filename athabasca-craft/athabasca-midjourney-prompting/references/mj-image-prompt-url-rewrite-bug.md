@@ -6,7 +6,7 @@ Athabasca logs a Midjourney generation as timed out even though the image grid i
 
 ## Confirmed reproduction
 
-- Submitted prompt begins with an Athabasca project-media URL, e.g. `https://media.wheretoaccess.com/...png`
+- Submitted prompt begins with an Athabasca project-media URL, e.g. `https://media.example.com/...png`
 - Midjourney/Discord returns a successful grid message
 - Discord message rewrites the leading image URL to a shortened `https://s.mj.run/...` link
 - Athabasca poller fails to match the returned message against the original prompt and times out
@@ -34,7 +34,7 @@ This preserves image-prompt workflows while surviving Discord URL rewriting.
 ## Regression test shape
 
 Add a test where:
-- submitted prompt starts with `https://media.wheretoaccess.com/...`
+- submitted prompt starts with `https://media.example.com/...`
 - returned message starts with `**<https://s.mj.run/...>`
 - `messageMatchesPrompt(...)` still returns true
 

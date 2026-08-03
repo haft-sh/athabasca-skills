@@ -28,18 +28,18 @@ Instagram stated in February 2025 that Reel recommendation signals include watch
 
 The same official article reported more than 4.5 billion Reel reshares per day across Instagram and Facebook at that time. This supports treating sends/shares as a first-class creative objective, but it does not reveal a universal ranking formula.
 
-**Source:** Instagram for Creators, “Helping creators of all sizes break through,” February 26, 2025.  
+**Source:** Instagram for Creators, “Helping creators of all sizes break through,” February 26, 2025.
 https://creators.instagram.com/blog/helping-creators-of-all-sizes-break-through
 
 Instagram’s Trial Reels announcement says eligible creators can show a Reel to non-followers first, inspect views/likes/comments/shares after roughly 24 hours, and optionally share it more broadly; automatic follower sharing can be based on early performance within 72 hours. Features and eligibility may change, so verify in-app/current docs.
 
-**Source:** Instagram for Creators, “Trial reels,” December 10, 2024.  
+**Source:** Instagram for Creators, “Trial reels,” December 10, 2024.
 https://creators.instagram.com/blog/instagram-trial-reels
 
 Instagram also extends originality guidance across Reels, photos, and carousels. Verify current eligibility/policy details before making compliance claims.
 
-**Sources:**  
-https://creators.instagram.com/original-content-guidelines  
+**Sources:**
+https://creators.instagram.com/original-content-guidelines
 https://creators.instagram.com/blog/rewarding-original-creators-on-instagram
 
 ### TikTok
@@ -52,17 +52,17 @@ TikTok’s public recommendation explainer identifies:
 
 It explicitly gives finishing a longer video as an example of a stronger interest signal than same-country device context, and says follower count and previous high-performing videos are not direct recommendation factors. It also says duplicated/spam content can be ineligible or disfavored.
 
-**Source:** TikTok Newsroom, “How TikTok recommends videos #ForYou,” June 18, 2020. This is an older but still useful public explanation; verify newer product/policy details for current decisions.  
+**Source:** TikTok Newsroom, “How TikTok recommends videos #ForYou,” June 18, 2020. This is an older but still useful public explanation; verify newer product/policy details for current decisions.
 https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you
 
 TikTok For Business recommends TikTok-native execution, vertical high-resolution production, safe-space awareness, text overlays, hook/body/close structure, stimulation through editing, and sound. Its Creative Codes evidence is primarily advertising research, so treat it as directional for organic creative rather than proof of organic ranking.
 
-**Source:** TikTok For Business, “Creative Codes: 6 principles for creating on TikTok.”  
+**Source:** TikTok For Business, “Creative Codes: 6 principles for creating on TikTok.”
 https://ads.tiktok.com/business/en/blog/creative-best-practices-top-performing-ads
 
 TikTok’s short-video guide emphasizes the first few seconds, clear product value, and a clear CTA. Again, it is commerce/ad guidance rather than a neutral organic-ranking disclosure.
 
-**Source:** TikTok For Business, “Making TikTok videos for high engagement,” November 24, 2024.  
+**Source:** TikTok For Business, “Making TikTok videos for high engagement,” November 24, 2024.
 https://ads.tiktok.com/business/en/blog/tiktok-short-video-best-practice
 
 ## Behavioral principles
@@ -71,14 +71,14 @@ https://ads.tiktok.com/business/en/blog/tiktok-short-video-best-practice
 
 Loewenstein’s information-gap account frames curiosity as attention to a gap between what a person knows and wants to know. For creative work, the practical implication is not “hide everything.” Show enough context that the gap becomes specific and resolvable. A gap that is too large or vague can produce indifference rather than curiosity.
 
-**Source:** George Loewenstein, “The Psychology of Curiosity: A Review and Reinterpretation,” 1994.  
+**Source:** “The Psychology of Curiosity: A Review and Reinterpretation,” 1994.
 https://www.cmu.edu/dietrich/sds/docs/loewenstein/PsychofCuriosity.pdf
 
 ### Emotion and sharing
 
 Berger and Milkman found that online sharing is associated not simply with positive versus negative valence, but with arousal: high-arousal emotions such as awe, anger, and anxiety were more associated with virality than low-arousal states such as sadness. Do not turn this into a mandate for outrage. Awe, delight, tension, and energized recognition can produce arousal without damaging trust.
 
-**Source:** Jonah Berger and Katherine Milkman, “What Makes Online Content Viral?”, Journal of Marketing Research, 2012.  
+**Source:** Jonah Berger and Katherine Milkman, “What Makes Online Content Viral?”, Journal of Marketing Research, 2012.
 https://journals.sagepub.com/doi/10.1509/jmr.10.0353
 
 ## Measurement funnel

@@ -2,7 +2,7 @@
 
 End-to-end workflow for generating 10+ reference images via Midjourney, evaluating grids, selecting best quadrants, upscaling, and persisting to Athabasca.
 
-Validated May 2026 on George project (14 MJ references + 6 Gemini character sheets).
+Validated May 2026 on Character A project (14 MJ references + 6 Gemini character sheets).
 
 ## Phase 1: Batch Generation
 
@@ -64,15 +64,15 @@ API-generated grids frequently have empty `metadataJson.mjButtons`. Recover from
 const messages = await fetch(`https://discord.com/api/v9/channels/${CHANNEL_ID}/messages?limit=50`);
 
 // Match by prompt content substring in message content
-const match = messages.find(m => 
-  m.components?.length > 0 && 
+const match = messages.find(m =>
+  m.components?.length > 0 &&
   m.content?.toLowerCase().includes(keyword)
 );
 
 // Extract button custom_ids
 for (const row of match.components) {
   for (const btn of row.components) {
-    if (btn.custom_id.startsWith("MJ::JOB::upsample::")) 
+    if (btn.custom_id.startsWith("MJ::JOB::upsample::"))
       buttons[`U${btn.custom_id.split("::")[3]}`] = btn.custom_id;
   }
 }
@@ -111,7 +111,7 @@ Instead, match by snowflake ID proximity:
 ```typescript
 // Upscaled message has: 1 attachment + prompt text in content
 // Match by snowflake ID > grid message ID
-const upscaled = messages.find(m => 
+const upscaled = messages.find(m =>
   m.attachments?.length === 1 &&
   m.id > gridMessageId &&
   m.content?.includes(promptSnippet)

@@ -4,7 +4,7 @@ Use this reference when a live remote-only media canary against a managed Haft r
 
 ## Pattern
 
-Observed on GLY after the delegated-grant route wiring and JWKS issues were already resolved:
+Observed on the project after the delegated-grant route wiring and JWKS issues were already resolved:
 
 1. `haft whoami --json` succeeds.
 2. `haft remotes --json` shows the remote as available and `remote-target.ready`.
@@ -14,7 +14,7 @@ Observed on GLY after the delegated-grant route wiring and JWKS issues were alre
    - `routeFamilies: ["automation"]`
    - `capabilities: ["artifact.import", "automation.media.ingest"]`
    - `pathPrefixes: [""]`
-5. `POST /api/automation/v1/media-ingest` with `destination.pathPrefix: "athabasca/gly"` fails with:
+5. `POST /api/automation/v1/media-ingest` with `destination.pathPrefix: "athabasca/<project-slug>"` fails with:
    - HTTP `403`
    - `automation.auth.scope-denied`
 6. The same request with `destination.pathPrefix: ""` succeeds.
@@ -36,7 +36,7 @@ The likely code smell is a mismatch between:
 Run these in order:
 
 ### A. Intended-path canary
-Use the real desired destination path first, for example `athabasca/gly`.
+Use the real desired destination path first, for example `athabasca/<project-slug>`.
 
 If it fails with `automation.auth.scope-denied`, do **not** immediately collapse the diagnosis into generic auth failure.
 

@@ -12,7 +12,7 @@ This skill exists because a provider can appear healthy and still be the wrong r
 
 ## When to use
 
-- JP asks to run a paid Athabasca video generation
+- the user asks to run a paid Athabasca video generation
 - the prompt names multiple `@imageN` references
 - character-sheet fidelity matters
 - you are switching providers to overcome a limitation
@@ -29,10 +29,10 @@ If the prompt says `@image2`, `@image3`, etc., that does **not** mean the provid
 1. Check live capabilities.
 2. Check whether the chosen provider/model/mode truly supports the needed reference strategy.
 3. Inspect the normalized Athabasca path or known skill/docs for whether those references are actually forwarded upstream.
-4. If the route only supports a single first-frame image but the prompt depends on multiple character-sheet references, stop and tell JP before dispatching.
+4. If the route only supports a single first-frame image but the prompt depends on multiple character-sheet references, stop and tell the user before dispatching.
 5. Treat that mismatch as a material blocker, not a minor caveat.
 
-## JP-specific operating rule
+## the user-specific operating rule
 
 If a provider limitation is likely to make the output unusable — especially missing multi-reference character conditioning — disclose it **before** spending the run.
 
@@ -88,4 +88,4 @@ A client/tool timeout does not establish that a paid BytePlus run failed. With t
 
 ## Relationship to other skills
 
-This overlaps with broader Athabasca video-generation guidance. Prefer the main workflow skill for end-to-end generation steps, and use this guardrail skill for the preflight decision about whether a given provider/mode is honest-to-goodness capable of the run JP is asking for.
+This overlaps with broader Athabasca video-generation guidance. Prefer the main workflow skill for end-to-end generation steps, and use this guardrail skill for the preflight decision about whether a given provider/mode is honest-to-goodness capable of the run the user is asking for.

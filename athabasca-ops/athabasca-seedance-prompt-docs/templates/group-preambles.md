@@ -52,17 +52,17 @@ N shots. Duration per shot: ~X.Xs. Transition: hard cuts between all shots.
 
 | Group | @image refs |
 |-------|------------|
-| A | @image1 (George 2012), @image2 (Spartan Room), @image3 (Typewriter), @image4 (Manuscript Stack) |
-| B | @image1 (George 2012), @image5 (George 2026), @image6 (Living Room), @image7 (Chip Bowl), @image8 (2012 Eyes ECU) |
-| C | @image5 (George 2026), @image9 (Kitchen), @image10 (Fridge POV), @image11 (Beer Bottle) |
-| D | @image1 (George 2012), @image2 (Spartan Room), @image3 (Typewriter), @image12 (Food Plates) |
-| E | @image5 (George 2026), @image9 (Kitchen), @image13 (Microwave + Hot Pocket) |
-| F | @image5 (George 2026), @image6 (Living Room), @image14 (Phone — Publisher) |
-| G | @image1 (George 2012), @image2 (Spartan Room), @image3 (Typewriter), @image15 (War Room Whiteboard) |
-| H | @image5 (George 2026), @image6 (Living Room), @image7 (Chip Bowl), @image14 (Phone) |
-| I | @image5 (George 2026), @image16 (Hallway), @image17 (Writing Room), @image19 (Cap on Hook) |
-| J | @image5 (George 2026), @image3 (Typewriter), @image17 (Writing Room), @image19 (Cap on Hook) |
-| K | @image5 (George 2026), @image3 (Typewriter), @image17 (Writing Room) |
-| L | @image5 (George 2026), @image3 (Typewriter), @image17 (Writing Room), @image18 (Page 'The drago'), @image19 (Cap on Hook) |
-| M | @image1 (George 2012), @image5 (George 2026), @image6 (Living Room), @image7 (Chip Bowl) |
-| N | @image5 (George 2026), @image6 (Living Room), @image17 (Writing Room), @image18 (Page 'The drago'), @image19 (Cap on Hook) |
+| A | @image1 (Character A 2012), @image2 (Spartan Room), @image3 (Typewriter), @image4 (Manuscript Stack) |
+| B | @image1 (Character A 2012), @image5 (Character A 2026), @image6 (Living Room), @image7 (Chip Bowl), @image8 (2012 Eyes ECU) |
+| C | @image5 (Character A 2026), @image9 (Kitchen), @image10 (Fridge POV), @image11 (Beer Bottle) |
+| D | @image1 (Character A 2012), @image2 (Spartan Room), @image3 (Typewriter), @image12 (Food Plates) |
+| E | @image5 (Character A 2026), @image9 (Kitchen), @image13 (Microwave + Hot Pocket) |
+| F | @image5 (Character A 2026), @image6 (Living Room), @image14 (Phone — Publisher) |
+| G | @image1 (Character A 2012), @image2 (Spartan Room), @image3 (Typewriter), @image15 (War Room Whiteboard) |
+| H | @image5 (Character A 2026), @image6 (Living Room), @image7 (Chip Bowl), @image14 (Phone) |
+| I | @image5 (Character A 2026), @image16 (Hallway), @image17 (Writing Room), @image19 (Cap on Hook) |
+| J | @image5 (Character A 2026), @image3 (Typewriter), @image17 (Writing Room), @image19 (Cap on Hook) |
+| K | @image5 (Character A 2026), @image3 (Typewriter), @image17 (Writing Room) |
+| L | @image5 (Character A 2026), @image3 (Typewriter), @image17 (Writing Room), @image18 (Page 'The drago'), @image19 (Cap on Hook) |
+| M | @image1 (Character A 2012), @image5 (Character A 2026), @image6 (Living Room), @image7 (Chip Bowl) |
+| N | @image5 (Character A 2026), @image6 (Living Room), @image17 (Writing Room), @image18 (Page 'The drago'), @image19 (Cap on Hook) |

@@ -64,7 +64,7 @@ When one character is narratively or commercially important:
 - list their non-negotiable visual cues from the approved sheet: face/snout silhouette, eyewear, eyes, helmet fit, skin/fur color, and signature wardrobe detail;
 - state the required expression and the failure modes to avoid.
 
-Concrete language outperforms vague continuity language. For example: “small two-nostril turtle snout, oversized black square glasses, large brown eyes” is useful; “same Turbo vibe” is not.
+Concrete language outperforms vague continuity language. For example: “small two-nostril turtle snout, oversized black square glasses, large brown eyes” is useful; “same Character A vibe” is not.
 
 A nuanced child-character performance can be specified as: cute but determined, focused eyes, subtle closed mouth, controlled concern; not scared, grotesque, angry, or goofy.
 
@@ -76,7 +76,7 @@ A nuanced child-character performance can be specified as: cute but determined, 
 - which feature is closest to the **outer frame**;
 - whether the character is speaking, and whether an open mouth must read as a command rather than a grin.
 
-Example: “At 12 o’clock, Gary’s eyes are nearest the central sky; his mouth and chin are nearest the top outer edge.”
+Example: “At 12 o’clock, Character B’s eyes are nearest the central sky; his mouth and chin are nearest the top outer edge.”
 
 ## Mandatory QA checklist
 

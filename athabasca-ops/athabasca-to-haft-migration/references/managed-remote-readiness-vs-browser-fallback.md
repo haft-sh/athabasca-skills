@@ -49,7 +49,7 @@ If you initiate browser login on the hosted destination while the CLI path is de
 ## Recommended reporting language
 
 Good:
-- "The export bundle is ready, but the hosted GLY destination is not currently grant-backed import-ready."
+- "The export bundle is ready, but the hosted the project destination is not currently grant-backed import-ready."
 - "CLI import is blocked by projection/verifier readiness, not by the Athabasca export bundle."
 - "Browser OTP login was started as a separate UI path, pending the code."
 

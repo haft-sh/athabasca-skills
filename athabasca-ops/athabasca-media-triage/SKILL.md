@@ -26,7 +26,7 @@ Do not use this for:
 
 ### 1) Fetch the reference document
 
-If the user provides a reference URL (typically on `media.wheretoaccess.com`), fetch it with `web_extract`. This document defines what was requested — use it to organize the triage by asset group or shot number.
+If the user provides a reference URL (typically on `media.example.com`), fetch it with `web_extract`. This document defines what was requested — use it to organize the triage by asset group or shot number.
 
 ### 2) Query all project media via API
 

@@ -1,6 +1,7 @@
 ---
 name: athabasca-asset-review-operations
 description: Set up and run Athabasca asset review queues, preserve user-specified traversal order, and classify outputs as canonical, exploratory, or not-yet-final.
+version: 1.0.0
 ---
 
 # Athabasca Asset Review Operations

@@ -62,10 +62,10 @@ The test should prove the token can see/access more than one project and that th
 
 ```bash
 curl -sS -b /tmp/athabasca-cookies.txt \
-  -X POST http://100.84.189.23:3000/api/auth/api-tokens \
+  -X POST http://$ATHABASCA_HOST:3000/api/auth/api-tokens \
   -H 'content-type: application/json' \
   -d '{
-    "name": "jp-superadmin-hermes",
+    "name": "automation-owner-client",
     "kind": "hermes_profile",
     "projectScopes": [],
     "operationModes": ["owner", "system_operator", "creator"],

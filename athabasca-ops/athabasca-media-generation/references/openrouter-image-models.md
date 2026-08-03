@@ -60,7 +60,7 @@ os.environ.get("OPENROUTER_API_KEY")   # None
 
 # ✅ dotenv_values — reads the profile .env file
 from dotenv import dotenv_values
-env = dotenv_values("/home/nrsimha/.hermes/profiles/cliphouse/.env")
+env = dotenv_values("$HOME/.hermes/profiles/cliphouse/.env")
 OR_KEY = env["OPENROUTER_API_KEY"]
 ```
 

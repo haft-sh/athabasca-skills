@@ -170,14 +170,14 @@ For live-action projects, language like ARRI Alexa, anamorphic lenses, naturalis
 All Seedance prompt list HTML documents link to a shared CSS file hosted on R2:
 
 ```
-https://media.wheretoaccess.com/shared/styles/athabasca-seedance-prompts-v1.css
+https://media.example.com/shared/styles/athabasca-seedance-prompts-v1.css
 ```
 
 Use `<link rel="stylesheet" href="...">` in the HTML `<head>`. Do NOT inline CSS.
 
 ## Local Staging for Edit Efficiency
 
-Athabasca-generated HTML documents are stored on R2 and served at `media.wheretoaccess.com`. The API returns a `publicUrl` — but this is the served URL, not a file you can re-download for editing. To avoid regenerating entire HTML documents for small edits, maintain local staging copies:
+Athabasca-generated HTML documents are stored on R2 and served at `media.example.com`. The API returns a `publicUrl` — but this is the served URL, not a file you can re-download for editing. To avoid regenerating entire HTML documents for small edits, maintain local staging copies:
 
 **Staging directory:** `~/.hermes/staging/<project-slug>/`
 
@@ -195,7 +195,7 @@ Athabasca-generated HTML documents are stored on R2 and served at `media.whereto
   "files": {
     "seedance-prompt-list.html": {
       "athabascaAssetId": "asset_xxxx",
-      "athabascaAssetUrl": "https://media.wheretoaccess.com/...",
+      "athabascaAssetUrl": "https://media.example.com/...",
       "athabascaReplaceRoute": "POST /api/projects/:slug/media/:assetId/replace",
       "phase": "storyboard",
       "lastSynced": "2026-05-29T00:12:58Z",
@@ -205,7 +205,7 @@ Athabasca-generated HTML documents are stored on R2 and served at `media.whereto
   },
   "project": "project-slug",
   "projectSlug": "project-slug",
-  "cssUrl": "https://media.wheretoaccess.com/shared/styles/athabasca-seedance-prompts-v1.css"
+  "cssUrl": "https://media.example.com/shared/styles/athabasca-seedance-prompts-v1.css"
 }
 ```
 

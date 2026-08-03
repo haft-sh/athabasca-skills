@@ -1,17 +1,17 @@
-# GLY migration example
+# the project migration example
 
-This reference captures a real Athabasca -> Haft migration-prep run for the `gly` project.
+This reference captures a real Athabasca -> Haft migration-prep run for the `the project` project.
 
 ## Source and destination
 
-- Athabasca project slug: `gly`
-- Athabasca base URL: `http://100.84.189.23:3000`
+- Athabasca project slug: `the project`
+- Athabasca base URL: `http://$ATHABASCA_HOST:3000`
 - Haft workspace: `~/Sites/haft/main`
-- Intended remote site: `https://gly.haft.sh`
+- Intended remote site: `https://<remote-host>`
 
 ## Script used
 
-`/home/nrsimha/Sites/haft/main/scripts/migrate-athabasca-gly.ts`
+`<destination-repository>/scripts/migrate-athabasca-the project.ts`
 
 ## Verified export results
 
@@ -27,17 +27,17 @@ The export pass produced:
 
 Bundle root:
 
-`/home/nrsimha/Sites/haft/main/tmp/athabasca-gly-migration/gly`
+`<destination-repository>/tmp/athabasca-the project-migration/the project`
 
 ## Important Haft behaviors discovered
 
-### 1. `target-folder=imports/athabasca/gly` is rejected
+### 1. `target-folder=imports/athabasca/<project-slug>` is rejected
 
 Haft import-path policy treats `imports`, `manifest`, and `exports` as internal/generated scaffold segments.
 
 Working target folder:
 
-`athabasca/gly`
+`athabasca/<project-slug>`
 
 ### 2. Raw HTML import can fail
 
@@ -70,14 +70,14 @@ A scratch Haft vault import succeeded after the target-folder and HTML-mirror fi
 
 Scratch vault path used:
 
-`/tmp/gly-haft-test-vault`
+`/tmp/the project-haft-test-vault`
 
 ## Remote import command template
 
 ```bash
 cd ~/Sites/haft/main
-haft remote add gly-prod --url https://gly.haft.sh --token-stdin
-haft import --remote <remote-slug> '/home/nrsimha/Sites/haft/main/tmp/athabasca-gly-migration/gly/docs-import/athabasca/gly' --target-folder 'athabasca/gly' --recursive
+haft remote add the project-prod --url https://<remote-host> --token-stdin
+haft import --remote <remote-slug> '<destination-repository>/tmp/athabasca-the project-migration/the project/docs-import/athabasca/<project-slug>' --target-folder 'athabasca/<project-slug>' --recursive
 ```
 
 ## What this reference is good for

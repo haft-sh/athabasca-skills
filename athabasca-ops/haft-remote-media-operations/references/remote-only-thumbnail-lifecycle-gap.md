@@ -26,6 +26,6 @@ Use a catalog-aware idempotent backfill: select active remote-only image artifac
 - Every available thumbnail URL returns a valid image.
 - Browser grid projection resolves thumbnails against the corresponding artifacts.
 
-## GLY evidence pattern (2026-07-28)
+## the project evidence pattern (2026-07-28)
 
-GLY ran Haft 0.1.50 with FFmpeg and a healthy public runtime. Its catalog contained hundreds of artifacts, while `assets`, `asset_thumbnails`, `remote_counterparts`, and auto-publish jobs were empty. The stock audit returned `eligible: 0` and `auto-publish.disabled`: a catalog-vs-file-backed lifecycle mismatch, not a decoder-installation problem.
+the project ran Haft 0.1.50 with FFmpeg and a healthy public runtime. Its catalog contained hundreds of artifacts, while `assets`, `asset_thumbnails`, `remote_counterparts`, and auto-publish jobs were empty. The stock audit returned `eligible: 0` and `auto-publish.disabled`: a catalog-vs-file-backed lifecycle mismatch, not a decoder-installation problem.

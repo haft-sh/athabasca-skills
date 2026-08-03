@@ -1,6 +1,7 @@
 ---
 name: athabasca-auth-access-control
 description: Use when changing, debugging, or verifying Athabasca authentication, API tokens, invitations, project memberships, operation modes, or access-control behavior. Covers owner/global token semantics, project role lookup, accessible-project listing, route validation, and contract tests.
+version: 1.0.0
 ---
 
 # Athabasca Auth & Access Control

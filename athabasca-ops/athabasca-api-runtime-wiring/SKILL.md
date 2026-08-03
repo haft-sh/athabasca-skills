@@ -33,7 +33,7 @@ Preferred layout:
 
 ```bash
 mkdir -p ~/.hermes/plugins
-ln -sfn /home/nrsimha/Sites/athabasca/.hermes/plugins/athabasca-api ~/.hermes/plugins/athabasca-api
+ln -sfn <athabasca-repository>/.hermes/plugins/athabasca-api ~/.hermes/plugins/athabasca-api
 ```
 
 Use the repo-local plugin directory as the canonical source so plugin code stays versioned with the Athabasca repo.

@@ -71,7 +71,7 @@ Seedance 2.0 image-to-video for 15s clips typically completes within 2–5 minut
 
 ## Node/Bun runtime
 
-`@fal-ai/client` is ESM-only. Use `bun -e '...'` (not `bun run -e`, which tries to resolve a script file). The package is installed in the Athabasca repo (`/home/nrsimha/Sites/athabasca`). Run scripts from that directory so Node/Bun can resolve `node_modules`.
+`@fal-ai/client` is ESM-only. Use `bun -e '...'` (not `bun run -e`, which tries to resolve a script file). The package is installed in the Athabasca repo (`<athabasca-repository>`). Run scripts from that directory so Node/Bun can resolve `node_modules`.
 
 ## Result structure
 

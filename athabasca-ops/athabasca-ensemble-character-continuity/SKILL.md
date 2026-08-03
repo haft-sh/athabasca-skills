@@ -34,7 +34,7 @@ For native Codex / GPT Image 2 ensemble stills, prefer:
 2. **hero identity lock** — the single authoritative character sheet for the most important character
 3. **surgical repair reference** — only add a third character sheet when repairing one specific wrong slot
 
-Do not automatically attach the whole cast if the real task is "keep this composition but make Turbo exact."
+Do not automatically attach the whole cast if the real task is "keep this composition but make Character A exact."
 
 ## Prompting pattern
 
@@ -44,8 +44,8 @@ Say plainly that the hero is the visual priority.
 
 Example shape:
 - "Reference image 1 controls the composition."
-- "Reference image 2 is the strict authoritative identity lock for Turbo."
-- "Do not borrow Turbo's face from reference image 1."
+- "Reference image 2 is the strict authoritative identity lock for Character A."
+- "Do not borrow Character A's face from reference image 1."
 
 ### 2) List non-negotiable face cues
 
@@ -64,7 +64,7 @@ Do not rely on vague phrases like "same character" when the face is the real fai
 If the shot is a circle / huddle / overhead ring, name the hero's exact clock position.
 
 Example:
-- "Turbo is at 6 o'clock, directly opposite Gary."
+- "Character A is at 6 o'clock, directly opposite Character B."
 
 ### 4) State facial orientation explicitly for top/bottom positions
 
@@ -96,9 +96,9 @@ When the user names a fixed cast, restate the exact final roster in the prompt a
 
 Useful language:
 - "Exactly six distinct players once each"
-- "No duplicate Turbo"
+- "No duplicate Character A"
 - "No extra turtle"
-- "Bone belongs in the upper-left slot"
+- "Character E belongs in the upper-left slot"
 
 ## Pitfalls
 

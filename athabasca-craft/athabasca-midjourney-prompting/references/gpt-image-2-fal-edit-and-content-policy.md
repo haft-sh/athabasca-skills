@@ -2,8 +2,8 @@
 
 ## Quick Decision Tree
 
-**Real person likeness needed?** → Use Seedream (GPT Image 2 will block it)  
-**Fictional character with reference?** → GPT Image 2 or Seedream both work  
+**Real person likeness needed?** → Use Seedream (GPT Image 2 will block it)
+**Fictional character with reference?** → GPT Image 2 or Seedream both work
 **No reference image?** → GPT Image 2 for photorealism, Midjourney for atmosphere
 
 ---
@@ -38,7 +38,7 @@ POST /api/projects/:slug/generate/image
 GPT Image 2's content checker blocks real-person likeness generation across **ALL providers** (openai-codex, fal-ai, replicate, byteplus). This is a platform-level OpenAI restriction, not provider-specific.
 
 ### What gets flagged:
-- **Explicit names**: "George R.R. Martin", "Leonardo DiCaprio", any recognizable public figure
+- **Explicit names**: "Character A R.R. Martin", "Leonardo DiCaprio", any recognizable public figure
 - **"This exact person" language**: "using this exact person", "keep his exact likeness", "this face"
 - **Reference images of real people**: Even with generic text prompts, the image itself can trigger detection
 - **Celebrity names in any context**: "Hugh Hefner style robe" → flagged
@@ -123,7 +123,7 @@ Using the word "character" in prompts triggers a "character design" rendering mo
 
 **Wrong:**
 ```
-"Character turnaround sheet for George, age 64, white beard..."
+"Character turnaround sheet for Character A, age 64, white beard..."
 ```
 
 **Right:**

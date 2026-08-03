@@ -38,7 +38,7 @@ A prose instruction to preserve continuity is insufficient. Attach the actual st
 ## Pitfalls
 
 - **Text-only continuity:** “Continue from Group B” has no conditioning effect unless the actual reference frame is attached.
-- **Missing character sheet:** A group featuring Turbo, Guardian, or another recurring character must include that character’s canonical identity sheet even if a prior clip or environment reference shows them.
+- **Missing character sheet:** A group featuring Character A, the guardian, or another recurring character must include that character’s canonical identity sheet even if a prior clip or environment reference shows them.
 - **Reference-budget inversion:** Blocking images are optional; immediate continuity and visible identity are not.
 - **Prompt drift at dispatch:** Provider heuristics never authorize rewriting an approved packet. Publish and approve a revised kit first.
 - **False completion:** A client timeout can coexist with a pending provider job. Query the generation log by idempotency key before retrying; do not create a duplicate paid job.

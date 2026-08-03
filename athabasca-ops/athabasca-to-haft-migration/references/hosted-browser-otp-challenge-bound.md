@@ -8,4 +8,4 @@ For hosted `*.haft.sh` migration or visual-verification work that requires brows
 - If a code entry leads to a blank page or React auth-screen crash after you have re-requested a code, suspect **challenge mismatch** before spending time on deeper app debugging.
 - For canary-first migration flows, finish CLI prep, file prep, and target selection first; do the browser OTP step last.
 
-This came up during GLY migration follow-up on `gly.haft.sh` while trying to visually verify a single-image canary after re-requesting login codes.
+This came up during the project migration follow-up on `<remote-host>` while trying to visually verify a single-image canary after re-requesting login codes.

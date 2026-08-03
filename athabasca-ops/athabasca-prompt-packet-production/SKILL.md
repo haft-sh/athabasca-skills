@@ -1,6 +1,7 @@
 ---
 name: athabasca-prompt-packet-production
 description: Build, revise, and dispatch project-attached AI-video prompt packets with explicit reference roles, dialogue timing, and reviewable generation groups.
+version: 1.0.0
 ---
 
 # Athabasca Prompt Packet Production

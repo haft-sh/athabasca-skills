@@ -2,17 +2,17 @@
 
 Use this note when a managed Haft remote has been repaired to `remote-target.ready`, a single-file canary succeeds, but the first full document import still fails.
 
-## Observed live pattern on GLY
+## Observed live pattern on the project
 
-After the new `gly.haft.sh` instance was fixed:
+After the new `<remote-host>` instance was fixed:
 
 - `haft remotes --json` showed the target as `ready`
 - allowed operations included `import`
-- a single-file Markdown canary imported successfully with `haft import ./file.md --remote gly --target-folder ... --wait --json`
+- a single-file Markdown canary imported successfully with `haft import ./file.md --remote the project --target-folder ... --wait --json`
 - but the bundle command
 
 ```bash
-haft import /path/to/docs-dir --remote gly --target-folder athabasca/gly --recursive --wait --json
+haft import /path/to/docs-dir --remote the project --target-folder athabasca/<project-slug> --recursive --wait --json
 ```
 
 failed with:
@@ -36,7 +36,7 @@ If the one-file canary already succeeded, the managed remote path is alive. The 
 5. Split the batch into deterministic chunks.
 6. Keep target folders explicit per subgroup.
 
-GLY worked with this shape:
+the project worked with this shape:
 
 - top-level docs as a small explicit file list
 - living docs as a small explicit file list

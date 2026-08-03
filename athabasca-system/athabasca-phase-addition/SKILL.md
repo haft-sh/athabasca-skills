@@ -1,6 +1,7 @@
 ---
 name: athabasca-phase-addition
 description: Use when adding a new production phase to Athabasca or changing the phase lifecycle. Covers schema, API routes, frontend phase views, docs, tests, and future foreign-key wiring for phase-scoped artifacts.
+version: 1.0.0
 ---
 
 # Athabasca Phase Addition

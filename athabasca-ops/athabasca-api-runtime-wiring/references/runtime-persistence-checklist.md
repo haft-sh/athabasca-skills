@@ -9,11 +9,11 @@ Use this when Athabasca helper tools should persist across Hermes gateway restar
 readlink -f ~/.hermes/plugins/athabasca-api
 
 # Profile config contains persistent enablement
-HOME=/home/nrsimha hermes --profile cliphouse config path
-HOME=/home/nrsimha hermes --profile cliphouse plugins list --plain --no-bundled
+HOME=$HOME hermes --profile cliphouse config path
+HOME=$HOME hermes --profile cliphouse plugins list --plain --no-bundled
 
 # Profile env contains Athabasca values
-HOME=/home/nrsimha hermes --profile cliphouse config env-path
+HOME=$HOME hermes --profile cliphouse config env-path
 
 # Gateway unit is loading the env file
 systemctl --user show hermes-gateway-cliphouse.service \
@@ -25,7 +25,7 @@ systemctl --user show hermes-gateway-cliphouse.service \
 ```ini
 # ~/.config/systemd/user/hermes-gateway-cliphouse.service.d/env.conf
 [Service]
-EnvironmentFile=/home/nrsimha/.hermes/profiles/cliphouse/.env
+EnvironmentFile=$HOME/.hermes/profiles/cliphouse/.env
 ```
 
 ## Proof that the wiring is fixed

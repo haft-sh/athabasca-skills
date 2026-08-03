@@ -7,7 +7,7 @@ author: Hermes Agent (Athabasca)
 
 # Athabasca Seedance Prompt Documents
 
-Use this skill when JP asks to create, update, or upload a Seedance prompt HTML document for an Athabasca project. These documents are the dispatch surface for Seedance 2.0 / Kling I2V image-to-video generation — they contain group-based shot breakdowns with inline reference images that Seedance uses as anchors.
+Use this skill when the user asks to create, update, or upload a Seedance prompt HTML document for an Athabasca project. These documents are the dispatch surface for Seedance 2.0 / Kling I2V image-to-video generation — they contain group-based shot breakdowns with inline reference images that Seedance uses as anchors.
 
 ## Document Structure
 
@@ -28,14 +28,14 @@ A Seedance prompt HTML document has this structure:
 
 ## Reference Image Cards
 
-Each group must have a **Reference Images section** with actual image cards — NOT just text labels like `@image1, @image2`. JP will reject a document that lists refs as bare text without thumbnails.
+Each group must have a **Reference Images section** with actual image cards — NOT just text labels like `@image1, @image2`. the user will reject a document that lists refs as bare text without thumbnails.
 
 ### Card format
 
 Each reference image card includes:
 - **Thumbnail** — `<img>` tag loading from the asset's `publicUrl`
 - **@imageN tag** — the Seedance reference identifier (e.g., `@image1`)
-- **Title** — human-readable name (e.g., "George 2012 — Character Sheet")
+- **Title** — human-readable name (e.g., "Character A — Character Sheet")
 - **Description** — brief visual description (e.g., "Younger lean bearded fantasy novelist. Fisherman's cap.")
 - **Generation prompt** — the original text-to-image prompt used to create it
 - **Asset ID** — the Athabasca asset ID in monospace (e.g., `asset_mpq74mjl8bbeggmf`)
@@ -66,7 +66,7 @@ The setting is the spartan writing room in @image2. Character: @image1. Typewrit
 14 shots. Duration per shot: ~1.1s. Transition: hard cuts between all shots.</p>
 ```
 
-### Incorrect format (JP will reject)
+### Incorrect format (the user will reject)
 
 ```html
 <p>📎 Reference images for this group: @image1, @image2, @image3, @image4</p>
@@ -142,9 +142,9 @@ Seedance generates live-action cinematic video. **All "anime" references must be
 
 Catch any remaining standalone "anime" words with a final regex pass: `re.sub(r'\banime\b', 'cinematic', html, flags=re.IGNORECASE)`.
 
-## Source-synthesis rule when JP provides both a shot list and a script
+## Source-synthesis rule when the user provides both a shot list and a script
 
-When JP supplies **both** a scene shot list and the broader script and asks for a prompt preview doc, do not treat them as redundant.
+When the user supplies **both** a scene shot list and the broader script and asks for a prompt preview doc, do not treat them as redundant.
 
 Use them in this precedence order:
 1. **Shot list drives the beat decomposition** — which moments belong in Group A vs Group B, what the shot count should be, and which visual actions deserve their own prompt shots.
@@ -158,7 +158,7 @@ Operationally:
 - if a line of dialogue is important to the beat, include the literal line in the prompt rather than summarizing it vaguely
 - if the script and shot list differ in specificity, prefer the shot list for staging order and the script for exact on-screen content
 
-This is especially important for intimate room-scale GLY scenes: the shot list usually contains the camera psychology and continuity logic, while the script carries the exact spoken beats and prop business that Seedance needs stated explicitly.
+This is especially important for intimate room-scale the project scenes: the shot list usually contains the camera psychology and continuity logic, while the script carries the exact spoken beats and prop business that Seedance needs stated explicitly.
 
 ## Stateless prompt explicitness for Seedance
 
@@ -179,26 +179,26 @@ rewrite it into concrete on-screen information:
 - the exact identity/appearance of the characters and setting elements that matter
 
 Bad:
-- `GLY instructing Turbo in the Just Walk Through Shield ritual.`
-- `Turbo follows the first ritual instruction.`
+- `the project instructing Character A in the Just Walk Through Shield ritual.`
+- `Character A follows the first ritual instruction.`
 - `The ritual language is introduced clearly and simply.`
 
 Better:
-- `GLY, a small calm glowing blue guide, tells Turbo: "This is the Just Walk Through Shield. One hand on your chest. One hand on your shell. Breathe in. Breathe out. Then just walk through."`
-- `Turbo places one hand flat on the center of his chest while listening.`
-- `Turbo's wooden shield fills the foreground with the painted word "Turbo" visible as a soft golden-green ripple crosses it.`
+- `the project, a small calm glowing blue guide, tells Character A: "This is the Just Walk Through Shield. One hand on your chest. One hand on your shell. Breathe in. Breathe out. Then just walk through."`
+- `Character A places one hand flat on the center of his chest while listening.`
+- `Character A's wooden shield fills the foreground with the painted word "Character A" visible as a soft golden-green ripple crosses it.`
 
 Rule of thumb: if the line would make sense only to a human who already read the script, it is too implicit for Seedance and must be expanded.
 
 ## Format-cloning workflow
 
-When JP says a new prompt preview should be **"in this format"** and points at an existing published HTML prompt preview, do not invent a new wrapper.
+When the user says a new prompt preview should be **"in this format"** and points at an existing published HTML prompt preview, do not invent a new wrapper.
 
 Preferred workflow:
 1. Fetch the referenced published HTML and treat it as the structural template.
-2. Preserve the same CSS link, page rhythm, section ordering, reference-card treatment, and overall review-doc shape unless JP explicitly asks for a redesign.
+2. Preserve the same CSS link, page rhythm, section ordering, reference-card treatment, and overall review-doc shape unless the user explicitly asks for a redesign.
 3. Rewrite the scene-specific copy inside that wrapper: title, director note, group headers, reference cards, prompt preambles, and per-shot text.
-4. If the user calls out a markup defect in the existing wrapper, fix that defect while preserving the wrapper shape. In particular, when JP says the text should wrap and the page needs a fixed-width container, add a bounded main wrapper (for example `max-width` + centered margin + padding) and explicitly set long prompt blocks / figcaptions to wrap (`white-space: pre-wrap`, `overflow-wrap: anywhere` or equivalent) so large pasted prompts and long asset URLs do not overflow.
+4. If the user calls out a markup defect in the existing wrapper, fix that defect while preserving the wrapper shape. In particular, when the user says the text should wrap and the page needs a fixed-width container, add a bounded main wrapper (for example `max-width` + centered margin + padding) and explicitly set long prompt blocks / figcaptions to wrap (`white-space: pre-wrap`, `overflow-wrap: anywhere` or equivalent) so large pasted prompts and long asset URLs do not overflow.
 5. If a normal full GET is blocked but a ranged GET works, use the ranged/body fetch path rather than concluding the document is unavailable.
 6. Only after the wrapper is locally inspectable should you rewrite the new scene.
 
@@ -210,11 +210,11 @@ Required wrapper repair pass when the source doc has legibility issues:
 - Put `min-width: 0; overflow: hidden; overflow-wrap: anywhere;` on cards/captions and `box-sizing: border-box` globally so long asset names and URLs cannot bleed past borders.
 - Verify the published HTML actually contains the wrapper fix before reporting success.
 
-This is especially important for GLY Seedance previews because JP is often approving a dispatch surface shape, not just the prompt text inside it.
+This is especially important for the project Seedance previews because the user is often approving a dispatch surface shape, not just the prompt text inside it.
 
 9. Verify the uploaded HTML body contains the expected wrapper-fix markers (for example `max-width:` and `white-space:pre-wrap`) before reporting success.
 
-This is especially important for GLY Seedance previews because JP is often approving a dispatch surface shape, not just the prompt text inside it.
+This is especially important for the project Seedance previews because the user is often approving a dispatch surface shape, not just the prompt text inside it.
 
 ## Character-reference interpretation rule
 
@@ -241,7 +241,7 @@ Use faster shot counts only if the scene genuinely wants montage energy.
 
 ## High-density sequence compression rule
 
-When the source shot list is **long and editorially dense** (for example 25–35 shots for a dream, sports play, panic spiral, or action passage) but JP asks for a Seedance prompt preview doc, do **not** automatically mirror the source one-shot-for-one-shot into the preview.
+When the source shot list is **long and editorially dense** (for example 25–35 shots for a dream, sports play, panic spiral, or action passage) but the user asks for a Seedance prompt preview doc, do **not** automatically mirror the source one-shot-for-one-shot into the preview.
 
 Instead:
 1. Identify the **emotional spine** of the sequence.
@@ -261,14 +261,14 @@ Example pattern for a pressure-dream sports scene:
 
 ### Full-shot preservation mode
 
-If JP explicitly pushes back on over-compression, asks to **maintain all the original shots**, or frames the preview doc as a fuller scene-preservation pass rather than a quick-generation probe, switch modes.
+If the user explicitly pushes back on over-compression, asks to **maintain all the original shots**, or frames the preview doc as a fuller scene-preservation pass rather than a quick-generation probe, switch modes.
 
 In this mode:
 - preserve the entire source shot-list order
 - keep every original beat represented somewhere in the preview doc
 - **retain every source control field in the model-facing shot copy:** Subject, Action, Dialogue / sound, Composition, Visual focus, Emotion, and Continuity note. Do not condense these into a one-sentence beat summary: framing, eye trace, performance, and cut logic are dispatch controls.
 - redistribute the material into **dense multi-shot groups** rather than collapsing the whole scene into two broad lanes
-- if JP specifies the group size (for example, **groups of 5 shots**), treat that as exact: a 30-shot list becomes six groups covering 001–005, 006–010, 011–015, 016–020, 021–025, and 026–030
+- if the user specifies the group size (for example, **groups of 5 shots**), treat that as exact: a 30-shot list becomes six groups covering 001–005, 006–010, 011–015, 016–020, 021–025, and 026–030
 - when no group size is specified, use the scene rhythm to choose it; for action/dream sequences, a strong default is **~6–7 shots per group at ~2 seconds each**, while intimate room-scale coverage often benefits from **5 shots at ~3 seconds each**
 - preserve intentionally static transition shots such as full black or full white when the user asks for **all** source shots; do not silently drop them merely because static frames are normally inefficient for Seedance
 - show the **original source-shot ranges** in the group headers so the grouping is traceable back to the markdown
@@ -345,7 +345,7 @@ When building the reference manifest, resolve the canonical (green-approved) ver
 
 ```bash
 # List all assets with @image in the title
-curl -sS "http://localhost:3000/api/projects/george/media" | python3 -c "
+curl -sS "http://localhost:3000/api/projects/<project-slug>/media" | python3 -c "
 import sys,json
 data=json.load(sys.stdin)
 for a in data.get('assets',[]):
@@ -354,48 +354,48 @@ for a in data.get('assets',[]):
 "
 ```
 
-**CRITICAL: Always verify `colorTag: "green"`** before including a reference image. Do NOT select an asset based on title matching alone — JP has multiple versions of each reference (v1, v2, v3, U1, U2, etc.) and only the green-approved one is canonical. Query the individual asset if unsure:
+**CRITICAL: Always verify `colorTag: "green"`** before including a reference image. Do NOT select an asset based on title matching alone — the user has multiple versions of each reference (v1, v2, v3, U1, U2, etc.) and only the green-approved one is canonical. Query the individual asset if unsure:
 
 ```bash
 curl -sS "http://localhost:3000/api/media/asset_XXXXX" | python3 -c "import sys,json; d=json.load(sys.stdin); a=d.get('asset',{}); print(f'color: {a.get(\"colorTag\")}, title: {a.get(\"title\")}')"
 ```
 
-If no green version exists for a given `@imageN`, ask JP which one to use rather than guessing.
+If no green version exists for a given `@imageN`, ask the user which one to use rather than guessing.
 
 ## Iterative Audit Workflow
 
-When JP asks to review and fix a Seedance prompt document:
+When the user asks to review and fix a Seedance prompt document:
 
-1. **Assume local-first unless explicitly told to persist.** If JP asks for rewritten prompts inline in chat or asks for a v2 preview file, do not upload or replace the Athabasca asset unless he explicitly asks for that step.
+1. **Assume local-first unless explicitly told to persist.** If the user asks for rewritten prompts inline in chat or asks for a v2 preview file, do not upload or replace the Athabasca asset unless he explicitly asks for that step.
 2. **Preserve the existing document structure.** For preview-doc revision work, keep the same overall HTML format, reference-card layout, headers, and group structure; update the shot-copy inside the prompt blocks rather than reinventing the wrapper.
 3. **For shot-copy passes, make the prompts stateless and dispatchable.** Add explicit dialogue, exact body actions, exact prop behavior, and visible cause/effect beats. Do not leave screenplay shorthand like "the ritual", "he follows the instruction", or "the words land" unexplained.
 4. **Don't upload after each fix.** Accumulate changes locally in the temp file.
-5. **Make changes one at a time when JP is auditing.** JP may review fixes incrementally.
-6. **Do a full upload only after JP approves the complete audit or explicitly asks for persistence.**
+5. **Make changes one at a time when the user is auditing.** the user may review fixes incrementally.
+6. **Do a full upload only after the user approves the complete audit or explicitly asks for persistence.**
 7. Use `POST /api/projects/:slug/media/:assetId/replace` for the final in-place overwrite when persistence is requested.
 
-This avoids creating multiple intermediate assets, preserves the preview-doc shape JP already approved, and keeps manual Seedance dispatch workflows lightweight.
+This avoids creating multiple intermediate assets, preserves the preview-doc shape the user already approved, and keeps manual Seedance dispatch workflows lightweight.
 
 ## Prompt handoff to live dispatch
 
-When JP pastes a prompt and wants it used for generation:
+When the user pastes a prompt and wants it used for generation:
 
 1. Preserve the user-supplied prompt text as-is unless there is an **egregious** mistake.
 2. Replace internal Athabasca asset IDs embedded inline (for example `asset_...`) with the corresponding canonical `publicUrl` values before dispatch.
 3. Keep the original `@imageN` / `@videoN` labels in the prompt body; only swap the asset identifiers to URLs.
-4. If you detect an internal contradiction in the mapping (for example `@image1` is defined as Turbo but a later shot says "Dozer, matching @image1 exactly"), call it out explicitly as a compliance risk.
+4. If you detect an internal contradiction in the mapping (for example `@image1` is defined as Character A but a later shot says "Character C, matching @image1 exactly"), call it out explicitly as a compliance risk.
 5. Do not silently rewrite the creative text for small stylistic reasons. Only correct the contradiction automatically when the user explicitly allows prompt fixes or when the mistake would obviously break identity/continuity.
 6. When the preview doc's displayed reference set is lighter than the actual dispatch needs, expand the live dispatch ref set with any already-attached environment / authority anchors the scene clearly depends on (for example a stadium establishing shot or coach character sheet) and disclose that you did so. The dispatch payload should optimize for model compliance, not blindly mirror an under-specified preview card list.
-7. If JP provides an additional room or environment angle specifically as a spatial anchor (for example, "reverse angle" or "for 360 spatial coverage"), preserve that note in the prompt body and include the asset in the dispatched reference set even if the original preview doc only showed the main hero angle. This is especially useful for bedroom/interior scenes where Seedance needs help maintaining continuous geography across multiple shots.
+7. If the user provides an additional room or environment angle specifically as a spatial anchor (for example, "reverse angle" or "for 360 spatial coverage"), preserve that note in the prompt body and include the asset in the dispatched reference set even if the original preview doc only showed the main hero angle. This is especially useful for bedroom/interior scenes where Seedance needs help maintaining continuous geography across multiple shots.
 
 ### Chained group extension dispatch
 
-When JP wants Group B (or any later group) to continue from the previously generated group for continuity:
+When the user wants Group B (or any later group) to continue from the previously generated group for continuity:
 
 1. Use the prior group’s **persisted Athabasca `publicUrl`** as the continuation video reference; never chain from a local cache or an upstream temporary URL.
 2. Keep the later group’s displayed image references in their original order and attach them alongside the video reference.
 3. Dispatch through the normalized API with `mode: "reference-to-video"`, `referenceVideoUrls: [previousGroupPublicUrl]`, and the group’s ordered `referenceImageUrls`.
-4. Change only the opening line when JP asks for that exact delta. The approved wording is: `I want you to extend video one and generate the following shots.` Preserve every remaining character of the published group prompt unless JP requests further edits.
+4. Change only the opening line when the user asks for that exact delta. The approved wording is: `I want you to extend video one and generate the following shots.` Preserve every remaining character of the published group prompt unless the user requests further edits.
 5. Carry forward the same provider, model, duration, resolution, aspect ratio, and audio settings when the user says the continuation is otherwise identical.
 6. Use a new idempotency key for the new group, but keep it stable across retries of that same group.
 7. Record the previous video asset/URL in provenance, then verify the new asset, public URL, audio stream, and project attachment before reporting success.
@@ -443,14 +443,14 @@ If the user selects a specific output asset as the next-group predecessor, its p
 
 ## Pitfalls
 
-- **NEVER select a reference image based on title matching alone.** JP has multiple versions of each `@imageN` (v1, v2, v3, U1, U2, etc.). Only assets with `colorTag: "green"` are canonical. Always verify via the media API before including. Using a non-green asset is a first-class error — JP will catch it and make you fix it.
-- **Never output bare @imageN lists without thumbnails.** JP will reject documents that list refs as text only. The reference section must have actual `<img>` tags loading from R2 URLs.
+- **NEVER select a reference image based on title matching alone.** the user has multiple versions of each `@imageN` (v1, v2, v3, U1, U2, etc.). Only assets with `colorTag: "green"` are canonical. Always verify via the media API before including. Using a non-green asset is a first-class error — the user will catch it and make you fix it.
+- **Never output bare @imageN lists without thumbnails.** the user will reject documents that list refs as text only. The reference section must have actual `<img>` tags loading from R2 URLs.
 - **Never forget the preamble.** The @imageN tags must appear in a proper instruction block that tells Seedance how to use them, not as a metadata footnote.
 - **Shot numbers must reset per group.** Seedance has no concept of global shot numbering — it only sees the current group's prompt.
 - **Anime language leaks are common.** Do a final regex pass to catch any remaining "anime" references after targeted replacements.
 - **Reference images must match the group.** Don't copy-paste the same ref block for every group — each group has a specific subset of the 19 reference images.
 - **In-place replace preserves the URL.** When using `POST /api/projects/:slug/media/:assetId/replace`, the asset ID and publicUrl stay the same — only content, size, sha256, and updatedAt change.
-- **Accumulate fixes locally during audit.** When JP reviews reference images and asks for fixes one at a time, don't upload after each fix. Build changes in the local temp file and do one final replace upload when JP gives the go-ahead.
+- **Accumulate fixes locally during audit.** When the user reviews reference images and asks for fixes one at a time, don't upload after each fix. Build changes in the local temp file and do one final replace upload when the user gives the go-ahead.
 
 ## Related Skills
 

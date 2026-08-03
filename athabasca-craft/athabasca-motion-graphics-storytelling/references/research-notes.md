@@ -3,7 +3,7 @@
 This note captures the main sources used to synthesize the `athabasca-motion-graphics-storytelling` skill. It is not a literature review of all motion design; it is a practical, source-backed guide for editorial explainers and documentary graphics.
 
 ## 1) Vox / Joey Sendaydiego — editorial explainer practice
-Source: Storybench, *How Vox uses animation to make complicated topics digestible for everyone*  
+Source: Storybench, *How Vox uses animation to make complicated topics digestible for everyone*
 URL: https://www.storybench.org/how-vox-uses-animation-to-make-complicated-topics-digestible-for-everyone/
 
 Key takeaways:
@@ -14,7 +14,7 @@ Key takeaways:
 - Maps and geopolitical graphics require extra care because accuracy is part of the design problem.
 
 ## 2) Motionographer / Caroline Le — styleframes as mini-stories
-Source: Motionographer, *5 Questions To Consider When Creating Styleframes*  
+Source: Motionographer, *5 Questions To Consider When Creating Styleframes*
 URL: https://motionographer.com/2023/06/15/5-storytelling-questions-to-consider-when-creating-styleframes/
 
 Key takeaways:
@@ -23,7 +23,7 @@ Key takeaways:
 - Storyboards define action; styleframes define **feeling and visual rhetoric**.
 
 ## 3) TED-Ed creative process — storyboard-first educational clarity
-Source: TED-Ed, *Making a TED-Ed Lesson: Creative process*  
+Source: TED-Ed, *Making a TED-Ed Lesson: Creative process*
 URL: https://ed.ted.com/lessons/making-a-ted-ed-lesson-creative-process/digdeeper
 
 Key takeaways:
@@ -32,7 +32,7 @@ Key takeaways:
 - Complex ideas are best handled through planned sequential visualization, not ad hoc motion.
 
 ## 4) Classic animation principles adapted to motion graphics
-Source: GraduateSchool.edu / Jerron Smith, *Animation Principles Every Motion Designer Should Know*  
+Source: GraduateSchool.edu / Jerron Smith, *Animation Principles Every Motion Designer Should Know*
 URL: https://www.graduateschool.edu/learn/premiere-pro/animation-principles-motion
 
 Key takeaways:
@@ -43,7 +43,7 @@ Key takeaways:
 - **Easing** is essential; linear motion reads as mechanical.
 
 ## 5) Visual hierarchy and scanning patterns
-Source: IxDF, *What is Visual Hierarchy?*  
+Source: IxDF, *What is Visual Hierarchy?*
 URL: https://ixdf.org/literature/topics/visual-hierarchy
 
 Key takeaways:
@@ -52,7 +52,7 @@ Key takeaways:
 - Progressive disclosure reduces cognitive overload.
 
 ## 6) Nancy Duarte — motion as controlled attention
-Source: Duarte, *Animation works like magic*  
+Source: Duarte, *Animation works like magic*
 URL: https://www.duarte.com/blog/animation-works-like-magic/
 
 Key takeaways:
@@ -61,7 +61,7 @@ Key takeaways:
 - Animation is a tool for **attention control**, not merely energy.
 
 ## 7) Edward Tufte — seeing, comparison, credibility
-Source: NPR, *Edward Tufte Wants You to See Better*  
+Source: NPR, *Edward Tufte Wants You to See Better*
 URL: https://www.npr.org/2013/01/18/169708761/edward-tufte-wants-you-to-see-better
 
 Key takeaways:
@@ -70,7 +70,7 @@ Key takeaways:
 - Premature labeling can narrow perception too early.
 
 ## 8) Alberto Cairo — purpose-driven visual dialects
-Source: Real World Data Science, *The many ‘dialects’ of data visualization: Alberto Cairo and The Art of Insight*  
+Source: Real World Data Science, *The many ‘dialects’ of data visualization: Alberto Cairo and The Art of Insight*
 URL: https://realworlddatascience.net/viewpoints/interviews/posts/2023/08/01/alberto-cairo.html
 
 Key takeaways:

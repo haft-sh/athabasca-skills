@@ -6,6 +6,7 @@ triggers:
   - Need to explain or execute Athabasca multi-user onboarding
   - Need to grant limited access to a single project for an external person
   - Need to distinguish Tailscale sharing from Athabasca app auth
+version: 1.0.0
 ---
 
 # Athabasca collaborator onboarding

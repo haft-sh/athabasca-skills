@@ -45,8 +45,8 @@ Example:
 asset-001 / S002 — MONTAGE / SARAH CONNOR V.O.
 Fast-cut cold montage: server farm, drone swarms, cyborg face, mushroom cloud reflection
 ```
-![S002](https://media.wheretoaccess.com/good-boy/generated/generated_xxx.jpg)
-[URL](https://media.wheretoaccess.com/good-boy/generated/generated_xxx.jpg)
+![S002](https://media.example.com/good-boy/generated/generated_xxx.jpg)
+[URL](https://media.example.com/good-boy/generated/generated_xxx.jpg)
 
 ## User Response Handling
 

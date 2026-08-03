@@ -11,7 +11,7 @@ Do not infer that a configured CLI remote points at the user's custom domain.
 3. Run `haft remotes --json` and compare every remote's `apiOrigin` with the intended hostname.
 4. Treat a canary sent to a different origin as evidence about that other destination only.
 
-A configured remote labelled `dev` can be a separate machine even when `gly.haft.sh` is reachable in the browser.
+A configured remote labelled `dev` can be a separate machine even when `<remote-host>` is reachable in the browser.
 
 ## Confirm binary provenance
 

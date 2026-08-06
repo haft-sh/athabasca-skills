@@ -1,7 +1,7 @@
 ---
 name: seedance-2-5-prompting
 description: Write Dreamina Seedance 2.5 prompts for multimodal references, long-form progression, editing, extension, audio, and precise timeline control.
-version: 0.1.0
+version: 0.2.0
 ---
 
 # Dreamina Seedance 2.5 Prompting
@@ -10,12 +10,14 @@ Use this skill when authoring creative prompts for Dreamina Seedance 2.5 through
 
 ## Source basis
 
-This skill is based on the public ByteDance/Feishu document:
+This skill is based on two related public ByteDance/Feishu documents: the prompt-focused guide and the separate product/user guide.
 
 - Wiki view: https://bytedance.larkoffice.com/wiki/NjnWwvf4BiFYFLk2RzrcEgaunGf
 - Docx view: https://bytedance.larkoffice.com/docx/A88jd0B47oAd8zxWp5ycZFMfnxh
 
-Both supplied links render the same document, “Dreamina Seedance 2.5 Prompt Guide,” last updated August 5. The guide states that Seedance 2.5 supports text-only generation, image/video/audio references, and editing of existing videos. It presents prompting as a flexible natural-language combination of subject, action/event, environment, visual style, camera/cuts, and audio.
+The product/user-guide capture is preserved in `references/user-guide-source-capture.md`. It records the user guide's function categories, extension and long-video behavior, timestamp control, language handling, audio/BGM operations, multimodal reference optimization, transfer, partial editing, perspective modification, tone and multi-person reference upgrades, green-screen editing, Clay Renderer, seamless transitions, and multi-grid storyboard guidance.
+
+The Docx view is the prompt-focused “Dreamina Seedance 2.5 Prompt Guide,” last updated August 5. The Wiki view is the separate “【Dreamina】Seedance 2.5 User Guide,” modified August 4. Together they cover both prompt composition and product/function workflows. The prompt guide states that Seedance 2.5 supports text-only generation, image/video/audio references, and editing of existing videos. It presents prompting as a flexible natural-language combination of subject, action/event, environment, visual style, camera/cuts, and audio.
 
 Operational capabilities mentioned in the guide include video extension/continuous creation, long videos up to 180 seconds in the product workflow, timestamp text control, multilingual prompting, removal of irrelevant subtitles and background music, base-generation effects, multimodal reference transfer, partial elimination/editing, space-perspective modification, tone-reference upgrading, and audio editing. Treat the live Athabasca capabilities endpoint and adapter code as authoritative for what is currently exposed through the API.
 
@@ -303,3 +305,7 @@ Avoid effects that have no owner, timing, or physical consequence.
 - `athabasca-video-generation` — normalized Athabasca generation, capabilities, persistence, and verification
 - `athabasca-seedance-prompt-docs` — HTML prompt packets, reference cards, grouping, and review artifacts
 - `athabasca-visual-continuity` — recurring identity and visual continuity
+
+## Source-capture reference
+
+For the complete product/user-guide detail behind this skill, read `references/user-guide-source-capture.md`. Keep the main entrypoint focused on decision rules and use the reference for the one-time captured capability details and templates.

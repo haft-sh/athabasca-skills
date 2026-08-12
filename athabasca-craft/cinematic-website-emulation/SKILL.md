@@ -1,137 +1,281 @@
 ---
 name: cinematic-website-emulation
-description: Use to build Pear-style cinematic scrollytelling sites.
-version: 1.0.0
+description: Use for Pear-style scroll-scrubbed cinematic sites.
+version: 1.1.0
 triggers:
   - User wants to build a Pear-style cinematic landing page
   - User wants a scroll-driven storytelling site with AI-generated art
   - User wants to recreate the pear.no visual experience
 metadata:
   hermes:
-    tags: [cinematic, website, scrollytelling, pear, gsap, scrolltrigger, webgl, cinematic-light]
-    related_skills: [athabasca-premium-web-design, chatgpt-native-media, seedance-2-5-prompting, claude-design, cloudflare-workers-deploy]
+    tags: [cinematic, website, scrollytelling, pear, canvas, webgl, image-sequence, continuity]
+    related_skills: [athabasca-premium-web-design, reference-led-video-prompting, athabasca-video-continuity]
 ---
 
 # Cinematic Website Emulation
 
-## Overview
+Build Pear-style single-viewport scrollytelling as one authored visual journey. Art direction, source-film generation, frame handoffs, scroll architecture, and QA are one system.
 
-Execute a Pear-style cinematic single-viewport scrollytelling website from
-scratch. The workflow is: art direction → GPT Image stills → Seedance films →
-React 19 + GSAP build → Cloudflare deploy.
+## What Pear Actually Does
 
-## Phase 0: Art Direction
+Verified against the live `pear.no` experience and its loaded media on 2026-08-12:
 
-### Choose a painter/era
-Pick a fine-art style that has:
-- A strong, recognizable visual language
-- Flat, saturated, edge-to-edge sky (for text placement)
-- Dramatic scale or sublime mood
-- Iconic composition (figure, landscape, or object)
+- The primary story is rendered into fixed canvas/WebGL layers.
+- Scroll directly scrubs large WebP frame sequences; it does not merely trigger independently looping background videos.
+- Dedicated transition canvases and shader/compositing controls add texture, masking, and displacement, but the compositor is not what creates narrative continuity.
+- Continuity is authored into the source motion. A gilded pear is pushed toward camera, keeps its stem and screen position, changes material into scarred wood, and resolves into a living grafted branch. Other sequences keep following the same column/branch/fruit geometry while the camera moves through classical tableaux, grafting, an orchard, and a handoff.
+- The viewer sees movement and transformation *inside one spatially coherent shot*. There is no moment where an unrelated landscape becomes visible because its opacity increased.
 
-Good choices: Romanticism (Friedrich, Turner), Ukiyo-e (Hokusai, Hiroshige),
-Baroque (Caravaggio, Rembrandt), Art Nouveau (Mucha), Golden Age Illustration
-(Wyeth), Surrealism (Magritte, Dali).
+This distinction is mandatory:
 
-### Define the prompt skeleton
+> A matched horizon plus an opacity fade is still a cross-dissolve. Pear-style continuity is an authored camera move or in-frame transformation that is scroll-scrubbed frame by frame.
+
+Smoothing may be applied to scroll velocity or frame selection. It must not be used to disguise independent media with opacity.
+
+## Immediate Rejection Criteria
+
+Reject the implementation before visual polish if any of these are true:
+
+- each chapter owns an unrelated looping video;
+- chapter progression is implemented by cross-fading background opacity;
+- “match cut” means only similar sky colors or horizon heights;
+- transition direction is described in text but no exact endpoint images are supplied to generation;
+- clip B is generated from a recreation of clip A's last frame instead of the exact same file;
+- forward scroll plays a video but reverse scroll cannot return deterministically to prior frames;
+- HTTP 200 is the only production verification.
+
+Text, navigation, and editorial overlays may fade. The underlying visual world must remain spatially continuous.
+
+## Phase 0: Reference Teardown
+
+Before creating assets:
+
+1. Open the reference site and inspect it visually at multiple scroll positions.
+2. Inspect its live media/canvas architecture and network-loaded assets.
+3. Capture a chronological contact sheet of source films or frame sequences where accessible.
+4. Name the recurring anchor in every transition: silhouette, stem, horizon, light source, contour, camera axis, or motion vector.
+5. Separate observed fact from inference. Do not infer Pear's mechanism from screenshots alone when the live site is accessible.
+
+Record the teardown in a continuity map before prompting a model.
+
+## Phase 1: Art Direction and Continuity Bible
+
+### Choose one visual world
+
+Select a painterly or cinematic language with stable:
+
+- palette and grade;
+- lens/camera height;
+- light direction;
+- texture and grain;
+- atmospheric depth;
+- subject scale conventions;
+- editorial negative space.
+
+Good starting points include Romanticism, Baroque, Golden Age illustration, Ukiyo-e, Art Nouveau, and controlled surrealism. Do not imitate a living artist by name.
+
+### Define one journey, not a gallery
+
+Write a single sentence that can be filmed as a continuous journey. Example:
+
+> A witness follows one beam of dawn across the ocean; the beam becomes a harbor beacon, the beacon becomes an idea bulb, and its filament becomes the illuminated roads of a shared future.
+
+Every chapter must be a waypoint in that sentence.
+
+### Build the continuity map
+
+For every segment, specify:
+
+| Field | Required decision |
+|---|---|
+| Start authority | Exact image file and its role |
+| End authority | Exact image file and its role |
+| Persistent anchor | Object/line/light that survives the whole segment |
+| Camera trajectory | Pan, truck, orbit, push, pull, tilt, or crane |
+| Screen direction | Fixed left/right/up/down vector |
+| Material transformation | What changes and what cannot change |
+| Light lock | Source position, angle, intensity, and color |
+| Environment lock | Horizon, landmarks, topology, weather, and grade |
+| Prohibitions | Cuts, fades, teleports, relighting, extra subjects, text |
+
+A transition without a visible persistent anchor is not approved.
+
+## Phase 2: Generate Canonical Keyframes
+
+### Endpoint authority rule
+
+Generate continuity pairs, not isolated chapter art:
+
+1. Create the opening hero.
+2. Generate the first destination as a continuation of that exact hero.
+3. Reuse that exact destination file as both segment A's end authority and segment B's start authority.
+4. Repeat for the complete journey.
+
+Never regenerate “the same” seam frame. Reuse the same bytes.
+
+### Keyframe acceptance
+
+For each pair, verify visually:
+
+- same aspect ratio and safe crop;
+- compatible camera axis and focal length;
+- anchor occupies a plausible continuous trajectory;
+- horizon and major geometry do not jump;
+- light source does not switch sides;
+- grade, texture, and atmospheric density remain one world;
+- no invented text, labels, logos, or accidental subjects.
+
+Build one labeled contact sheet and review it before paid video generation.
+
+## Phase 3: Author the Motion
+
+### Preferred architecture: one source film
+
+The best result is one continuous source film covering the complete journey. It can hold on chapter compositions for editorial copy, but it does not reset the world between chapters.
+
+### Segmented fallback
+
+If provider duration limits require several clips:
+
+- use first-frame + last-frame generation when supported;
+- attach the exact preceding endpoint and exact next endpoint in the generation payload;
+- state the authority of each reference explicitly;
+- use 4–8 second single-motion segments rather than multi-beat prompts;
+- keep the camera moving in one named direction;
+- prohibit cuts, dissolves, black frames, speed ramps, teleports, and exposure resets;
+- generate silent footage unless audio is part of the product;
+- concatenate only after seam QA.
+
+Text-only continuity is not conditioning. “Continue smoothly” without attached endpoint authorities is insufficient.
+
+### Motion prompt scaffold
+
+```text
+START AUTHORITY: @image1 controls the exact first frame, camera axis,
+geometry, palette, lighting, atmosphere, and object state.
+END AUTHORITY: @image2 controls the exact final composition and anchor.
+
+One continuous shot. The camera [single trajectory]. The [persistent anchor]
+stays on [screen path] while [one material/spatial transformation]. Preserve
+[light lock] and [environment lock]. Arrive naturally at @image2 and hold.
+
+No cut, cross-dissolve, fade, teleport, relight, environment swap, extra
+subject, text, logo, border, collage, jitter, or camera-axis reversal.
 ```
-A wide cinematic scene painted as a single [STYLE]: [PAINTER] rendering,
-[QUALITIES]. A flat saturated [COLOR] sky fills the entire canvas edge to
-edge, no gradient, no vignette. [SUBJECT]. Generous empty sky across the
-upper portion for text. No text anywhere.
+
+### Seam QA
+
+For every clip boundary:
+
+1. Extract clip A's last stable frame and clip B's first stable frame.
+2. Compare them side by side with the canonical seam authority.
+3. Reject identity, geometry, light, horizon, or grade jumps.
+4. Inspect the full clip at normal speed and while frame-stepping.
+5. Verify reverse traversal remains coherent.
+
+A short overlap may be trimmed to the best common frame. Do not hide a bad seam with a dissolve.
+
+## Phase 4: Export a Scroll-Scrubbable Sequence
+
+Prefer deterministic image sequences for a Pear-level result.
+
+Example extraction:
+
+```bash
+ffmpeg -i journey-master.mp4 \
+  -vf "fps=12,scale=1440:-2:flags=lanczos" \
+  public/films/journey/1440/f_%04d.webp
+
+ffmpeg -i journey-master.mp4 \
+  -vf "fps=12,scale=768:-2:flags=lanczos" \
+  public/films/journey/768/f_%04d.webp
 ```
 
-### Pick the palette
-- One sky color (flat, saturated)
-- One accent color
-- One neutral (background/text)
-- One paper texture color
+Also keep:
 
-### Define the signature motif
-The Pear site uses halftone dither rings. What's your equivalent? Crepuscular
-rays, wave ripples, particle swarms, geometric expansion, ink splatter?
+- one poster/first frame;
+- a reduced-motion representative frame;
+- a contact sheet;
+- source prompt and endpoint provenance;
+- the source MP4 for re-encoding.
 
-### Choose the typography
-- Editorial serif display (self-hosted, no CDN)
-- Clean serif body
-- Technical monospace
+Choose frame rate by motion complexity and payload budget. Twelve fps is a useful starting point; test lower/higher rates visually.
 
-## Phase 1: Generate Assets
+## Phase 5: Build the Site
 
-### Step 1: Hero + chapter stills
-Use ChatGPT's native image mode with the prompt skeleton. Generate:
-1. Hero image (the "OG" — the iconic frame)
-2. 3–5 chapter images (each section gets its own painting)
-3. 1–2 transition images
+### Required media architecture
 
-### Step 2: Films from stills
-Use Seedance 2.5 (Dreamina) to turn 1–2 stills into slow films (10–15s).
-- Seedance 2.5 does image-to-video with reference conditioning
-- Export as MP4 and/or WebP image sequences
-- Generate at 1440px + 768px
+- native vertical document scroll;
+- one fixed full-viewport canvas or media compositor;
+- a large semantic scroll spacer;
+- scroll progress mapped deterministically to frame index;
+- neighboring-frame preloading and bounded cache behavior;
+- chapter copy mapped to frame ranges, not separate background assets;
+- `requestAnimationFrame` drawing outside React render state;
+- responsive object-cover/source crops;
+- reduced-motion fallback and keyboard/touch support.
 
-### Step 3: OG image
-Create a 1200×630 OG image that is itself an art asset in the same style.
+Do not set `body { overflow: hidden }` when the controller depends on native `scrollY`.
 
-## Phase 2: Build the Site
+### Minimal frame mapping
 
-### Tier A (recommended start — 2–3 weeks)
-- React 19 + Vite + TypeScript
-- GSAP ScrollTrigger for scroll-driven animations
-- Video backgrounds per chapter section
-- CSS/SVG ink effects (no WebGL shaders)
-- Desktop-first, responsive breakpoints
-- Single-viewport canvas with scroll scrubbing
+```ts
+const maxScroll = document.documentElement.scrollHeight - innerHeight;
+const progress = maxScroll > 0 ? scrollY / maxScroll : 0;
+const target = Math.round(progress * (frameCount - 1));
+requestAnimationFrame(() => drawFrame(target));
+```
 
-### Tier B (Pear-level — 4–6 weeks)
-- React 19 + custom WebGL canvas compositor
-- Custom scroll timeline (5350-unit model)
-- Full shader treatment: paper texture, ink bleed, dithering, burn
-- Image sequence scrubbing
-- SVG filter compositing (fractal noise displacement)
+Lerp the numeric scroll/frame target if desired. Do not lerp opacity between unrelated chapter worlds.
 
-### Key components to build
-1. **Scroll controller** — intercept wheel/touch, map to 0–1 timeline, lerp
-2. **Section manager** — each section gets a timeline range, renders when active
-3. **Video controller** — load video, scrub to frame based on scroll position
-4. **Image sequence preloader** — progressive WebP loading with warm-up
-5. **Overlay** — navigation, headline, CTA, chapter rail, tagline
-6. **Footer** — brand mark, tagline, contact
-7. **Menu** — full-screen overlay with chapter links
+### Canvas compositor
 
-## Phase 3: Deploy
+A Tier A build may use a 2D canvas with preloaded WebP frames. A Tier B build may add WebGL for:
 
-1. Self-host fonts (no third-party CDN)
-2. Optimize assets (WebP sequences, responsive, lazy)
-3. Cloudflare Pages or Vercel
-4. Custom domain + OG meta tags
-5. Verify: mobile, reduced-motion, loading states
+- paper/grain treatment;
+- dither or halftone motifs;
+- light bloom;
+- local displacement around a transformation;
+- masked editorial reveals.
 
-## Phase 4: The Making Of
+Shaders enrich authored continuity; they do not substitute for it.
 
-The Pear differentiator is that the scroll shows the source art. Include:
-- Original generated stills in the scroll timeline
-- Optionally display the prompt skeleton on screen
-- Make the process visible — the "how" is the story
+### Loading
 
-## Scoring Rubric (100 points)
+- show a real progress signal based on loaded critical frames;
+- preload the first playable window before revealing the stage;
+- continue loading ahead and behind the current frame;
+- avoid downloading every high-resolution frame before first paint;
+- provide an image/poster fallback if canvas or decoding fails.
 
-| Dimension | Target | Notes |
-|-----------|--------|-------|
-| Typography Authority | 9/10 | Editorial serif + body serif + mono, self-hosted |
-| Color Restraint | 9/10 | One sky, one accent, one neutral — no waste |
-| Spatial Confidence | 9/10 | Generous sky reserved for text, asymmetrical layouts |
-| Animation Weight | 8/10 | GSAP custom easing, scroll-choreographed reveals |
-| Micro-Interaction Detail | 8/10 | Magnetic buttons, stateful hover, scroll progress |
-| Scroll Experience | 9/10 | Scrub-driven, not block-based; reward the scroll |
-| 3D/Technical Visuals | 7/10 | Signature motif (waves/rays/ripples) plus canvas effects |
-| CTA Clarity | 8/10 | Commanding presence, inevitable placement |
-| Responsive Craft | 7/10 | Desktop-first, functional mobile |
-| Brand Coherence | 10/10 | Every frame reads as the same painter's oeuvre |
+## Phase 6: Production Verification
 
-## Related Skills
+Validate interactively and visually:
 
-`athabasca-premium-web-design` (rubric, animation patterns, Preset B),
-`chatgpt-native-media` (still generation), `seedance-2-5-prompting` (films),
-`claude-design` / `claude-code` (build), `cloudflare-domain-deploy` (domain),
-`cloudflare-workers-deploy` (static deploy), `social-posting` (launch).
+- mouse wheel and touchpad advance the journey;
+- touch and keyboard navigation work;
+- reversing scroll reverses the visual motion deterministically;
+- no chapter seam exposes a dissolve or unrelated layer;
+- text remains readable without covering the persistent anchor;
+- mobile crops preserve the anchor and subject;
+- reduced motion is usable;
+- frame payload, decoding, and memory are acceptable;
+- deployed production is inspected at beginning, every seam, and end;
+- browser console has no failed media requests or runtime errors.
+
+HTTP 200, build success, and lint success are necessary but not visual acceptance.
+
+## Quality Rubric
+
+| Dimension | Weight | Acceptance |
+|---|---:|---|
+| Authored continuity | 25 | One continuous journey; no opacity-disguised clip swaps |
+| Seam fidelity | 15 | Exact endpoint reuse and no geometry/light jump |
+| Scroll determinism | 15 | Frame-accurate forward and reverse control |
+| Visual authority | 10 | Coherent palette, lens, texture, and scale |
+| Narrative transformation | 10 | Every morph advances the central idea |
+| Typography and layout | 10 | Editorial authority without obscuring anchors |
+| Loading/performance | 10 | Progressive, responsive, bounded |
+| Accessibility | 5 | Keyboard, touch, fallback, reduced motion |
+
+A result scoring below full marks on authored continuity is not “Pear-style,” regardless of polish elsewhere.

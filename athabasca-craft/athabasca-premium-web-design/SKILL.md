@@ -100,10 +100,16 @@ When specifying or critiquing, reference these archetypes:
 
 ### Preset B: "Cinematic Light" (Pear Style)
 - **Identity:** Film studio aesthetic, slow reveals, intentional pacing
-- **Palette:** Warm whites, subtle gradients, single accent color
-- **Typography:** Dramatic display serif + technical monospace
-- **Signature:** Scroll-driven video scrubbing, full-bleed imagery
+- **Palette:** Flat saturated cerulean sky, warm off-white text, near-black
+  background, warm gold accent, cream paper texture
+- **Typography:** Self-hosted editorial serif display + serif body + monospace
+- **Signature:** Scroll-scrubbed single-viewport canvas, WebGL shader
+  compositing with halftone dither rings, ink bleed, paper texture, and
+  "burn" transitions from a custom scroll-driven timeline
 - **Best for:** Creative agencies, portfolios, storytelling brands
+- **Full reverse-engineering deep dive:** See
+  `references/pear-cinematic-site-deep-dive.md` — stack, asset pipeline,
+  scroll timeline, visual system, emulation playbook
 
 ### Preset C: "Neon Biotech"
 - **Identity:** Genome lab inside Tokyo nightclub

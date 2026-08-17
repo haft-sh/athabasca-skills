@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "purpose": "High-recall detection of candidate interaction-friction moments in secret-redacted creative-agent session exports. Matches require human labeling.",
+  "signals": [
+    {"type": "explicit_failure", "confidence": "high", "patterns": ["didn't work", "did not work", "doesn't work", "does not work", "not working", "still broken", "this failed", "it failed"]},
+    {"type": "correctness_correction", "confidence": "high", "patterns": ["this is wrong", "that's wrong", "that is wrong", "incorrect", "you got this wrong", "you made a mistake"]},
+    {"type": "intent_mismatch", "confidence": "high", "patterns": ["not what i asked", "not what i meant", "you misunderstood", "that's not the point", "that is not the point", "you missed the point"]},
+    {"type": "repeated_instruction", "confidence": "high", "patterns": ["i already said", "i told you", "again,", "still not", "you forgot", "you missed"]},
+    {"type": "excess_process", "confidence": "high", "patterns": ["too much", "overcomplicated", "over-complicated", "unnecessary", "not necessary", "stop asking", "just do it"]},
+    {"type": "quality_rejection", "confidence": "medium", "patterns": ["too generic", "feels generic", "too polished", "too sentimental", "too busy", "too safe", "not good enough", "i don't like this", "i do not like this"]},
+    {"type": "repair_request", "confidence": "medium", "patterns": ["fix this", "fix that", "fix it", "redo this", "try again", "change this"]},
+    {"type": "course_correction", "confidence": "medium", "patterns": ["no,", "no —", "instead,", "rather than", "don't do that", "do not do that"]}
+  ]
+}

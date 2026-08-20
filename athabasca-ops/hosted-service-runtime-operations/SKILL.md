@@ -140,6 +140,10 @@ When a hosted service runs a compiled Bun artifact selected through a `current` 
 
 For private semantic-provider releases and controlled activation windows, use `references/semantic-provider-activation.md` before changing routing or provider capacity.
 
+## DevSpace MCP service reference
+
+For DevSpace-specific instance identity, systemd override pitfalls, the Caddy reverse proxy setup, and the 502 diagnostic path, see `references/devspace-mcp-service-specifics.md`.
+
 ## Private cross-host provider connectivity
 
 A loopback-only semantic provider cannot be consumed by a separate application host without an explicit private transport. Before enabling the caller gate:

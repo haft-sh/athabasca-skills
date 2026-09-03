@@ -109,6 +109,14 @@ If live capabilities expose defaults or allowed values, use those rather than ha
 - `generateAudio: true` — keep audio on by default for dialogue, foley, ambience, and sound effects
 - Append `"No Music"` to the end of every Seedance prompt — music interferes with editing. This does **not** mean disabling audio; only set `generateAudio: false` when the user explicitly asks for silent/mute output.
 - Append quality suffix before "No Music": `4K, Ultra HD, Rich details, Sharp clarity, Cinematic texture, Natural colors, Stable picture No Music`
+
+**Seedance 2.5 model ID and constraints** (confirmed live):
+- Working model ID: `dreamina-seedance-2-5-260628`
+- **Broken**: `dreamina-seedance-2-5-260128` returns `ModelNotOpen — account has not activated`. Do not use this ID.
+- Max duration: **15 seconds**. For sequences longer than 15s, split into two 15s parts dispatched in parallel or sequence. See `references/two-part-splitting-pattern.md`.
+- Preserves the same `referenceImageUrls` syntax and `byteplus` provider as Seedance 2.0.
+- Generation time: 4–6 minutes for 15s at 480p. The Hermes `athabasca_request` tool may time out at 420s even when BytePlus is still processing. Poll `GET /api/projects/:slug/media?limit=5` to check — it often lands asynchronously.
+- Composite reference assets (combining multiple source images into a new canonical reference) follow the workflow in `references/composite-reference-asset-workflow.md`.
 - Use short granular takes (4–8s) instead of 15s multi-beat prompts — Seedance struggles with long prompts chaining multiple cuts
 - When regenerating a still whose prior motion felt too slow or static, relax any low-frame-rate / strobing constraint instead of preserving it by habit. Replace vague motion language with an explicit beat-by-beat action sequence (for example: foreground subject pauses for a beat, then takes off and follows the background subject) so the model has choreography, not just mood.
 - If the user asks for `3s` Seedance I2V, live providers may reject it despite capabilities. Replicate and BytePlus both rejected 3s on 2026-06-05; use the nearest valid `4s` setting, disclose the deviation, and patch/verify capabilities later rather than silently failing.

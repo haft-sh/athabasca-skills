@@ -1,0 +1,5 @@
+# Local worktrees created by DevSpace / haft-supervisor under .worktrees/
+# These are git worktree checkouts, not submodules — but bare `git add .`
+# will auto-stage them as uninitialized gitlinks if they are untracked.
+# This rule prevents contamination of feature branches.
+/.worktrees/

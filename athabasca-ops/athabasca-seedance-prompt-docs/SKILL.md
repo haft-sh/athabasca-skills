@@ -1,13 +1,13 @@
 ---
 name: athabasca-seedance-prompt-docs
 description: Create, iterate, and upload Seedance prompt HTML documents for Athabasca projects. Covers group-based video generation prompts with inline reference image cards, shot renumbering, and version management.
-version: 1.0.0
+version: 1.1.0
 author: Hermes Agent (Athabasca)
 ---
 
 # Athabasca Seedance Prompt Documents
 
-Use this skill when the user asks to create, update, or upload a Seedance prompt HTML document for an Athabasca project. These documents are the dispatch surface for Seedance 2.0 / Kling I2V image-to-video generation — they contain group-based shot breakdowns with inline reference images that Seedance uses as anchors.
+Use this skill when the user asks to create, update, or upload a Seedance prompt HTML document for an Athabasca project. These documents are the dispatch surface for Seedance 2.0 / Seedance 2.5 / Kling I2V image-to-video generation — they contain group-based shot breakdowns with inline reference images that Seedance uses as anchors.
 
 ## Document Structure
 
@@ -312,9 +312,26 @@ In packet metadata and headers, distinguish `visualShotCount`, `dialogueCarrierC
 
 1. Generate the HTML file locally (e.g., `/tmp/seedance-prompts-expanded-direct-v4.html`)
 2. Upload via `POST /api/projects/:slug/media` with `phase=storyboard`, `category=misc`, `sourceKind=manual`
-3. Color it with `PATCH /api/projects/:slug/media/:assetId` `{"colorTag":"red"}` (draft) or `{"colorTag":"green"}` (ready)
+3. Color it with `PATCH /api/projects/:slug/media/:assetId` `{\"colorTag\":\"red\"}` (draft) or `{\"colorTag\":\"green\"}` (ready)
 4. For in-place overwrites (updating an existing **document** version), use `POST /api/projects/:slug/media/:assetId/replace` — this preserves the asset ID, URL, and attachments while updating content.
 5. When a reviewer has already encountered stale browser/CDN content, or when replacing an **image** reference, publish a new immutable media asset under a new key/URL instead of relying on an in-place object overwrite. Attach the new asset, green-tag it if approved, update every packet reference binding to the new asset ID/public URL, and yellow-tag the superseded reference only after the new packet is verified. Never claim an old stable URL now represents a changed image merely because an origin fetch with a cache-busting query saw it.
+
+### Standalone HTML review packets
+
+When the user wants a prompt kit they can **view directly in a browser** (not just attach to Athabasca), upload the HTML to R2 and provide the public URL:
+
+```bash
+cd /home/nrsimha/Sites/athabasca
+bun run scripts/upload-to-r2.ts "/path/to/prompt-kit.html" --key "gly/briefs/scene-X-prompt-kit-vN.html"
+```
+
+The script returns a `publicUrl` like `https://media.wheretoaccess.com/gly/briefs/scene-X-prompt-kit-vN.html`. Provide this URL to the user as the final deliverable.
+
+**When to use R2 upload vs Athabasca media API:**
+- **R2 upload** — user wants a standalone URL to view/share directly (review packets, prompt kits for external review)
+- **Athabasca media API** — user wants the artifact attached to the project for Seedance dispatch or archival
+
+Always provide the public URL after upload. The user expects to access the artifact immediately, not just have it attached to the project.
 
 ### Metadata
 
@@ -392,9 +409,9 @@ When the user pastes a prompt and wants it used for generation:
 
 When the user wants Group B (or any later group) to continue from the previously generated group for continuity:
 
-1. Use the prior group’s **persisted Athabasca `publicUrl`** as the continuation video reference; never chain from a local cache or an upstream temporary URL.
-2. Keep the later group’s displayed image references in their original order and attach them alongside the video reference.
-3. Dispatch through the normalized API with `mode: "reference-to-video"`, `referenceVideoUrls: [previousGroupPublicUrl]`, and the group’s ordered `referenceImageUrls`.
+1. Use the prior group's **persisted Athabasca `publicUrl`** as the continuation video reference; never chain from a local cache or an upstream temporary URL.
+2. Keep the later group's displayed image references in their original order and attach them alongside the video reference.
+3. Dispatch through the normalized API with `mode: "reference-to-video"`, `referenceVideoUrls: [previousGroupPublicUrl]`, and the group's ordered `referenceImageUrls`.
 4. Change only the opening line when the user asks for that exact delta. The approved wording is: `I want you to extend video one and generate the following shots.` Preserve every remaining character of the published group prompt unless the user requests further edits.
 5. Carry forward the same provider, model, duration, resolution, aspect ratio, and audio settings when the user says the continuation is otherwise identical.
 6. Use a new idempotency key for the new group, but keep it stable across retries of that same group.
@@ -433,13 +450,13 @@ If rendering an already-dispatched prompt as HTML, build a full review surface r
 - include source-packet and generated-output provenance links;
 - attach the rendered HTML as an Athabasca project media item before presenting it as a review artifact.
 
-For an existing-packet generation, record the packet asset ID, exact prompt source, reference ordering, and any intentional delta in provenance. Never call a simplified rewrite an “exact” dispatch.
+For an existing-packet generation, record the packet asset ID, exact prompt source, reference ordering, and any intentional delta in provenance. Never call a simplified rewrite an "exact" dispatch.
 
 ### Narrow repair and continuation rule
 
 When an approved clip is broadly good and the user asks for a localized repair, recover the exact prompt from its server-side generation log. Re-dispatch the full prompt unchanged, adding only a scoped overlay or literal replacement at the requested defect. Do not rebuild it from a chat summary.
 
-If the user selects a specific output asset as the next-group predecessor, its persisted `publicUrl` is the continuation authority: include it as `referenceVideoUrls: [publicUrl]`, retain the later group’s canonical image references, and record the selected asset ID in provenance. A client timeout after submission requires idempotency-key lookup in `generation-logs` before any retry or status claim.
+If the user selects a specific output asset as the next-group predecessor, its persisted `publicUrl` is the continuation authority: include it as `referenceVideoUrls: [publicUrl]`, retain the later group's canonical image references, and record the selected asset ID in provenance. A client timeout after submission requires idempotency-key lookup in `generation-logs` before any retry or status claim.
 
 ## Pitfalls
 

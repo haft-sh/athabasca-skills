@@ -321,7 +321,7 @@ In packet metadata and headers, distinguish `visualShotCount`, `dialogueCarrierC
 When the user wants a prompt kit they can **view directly in a browser** (not just attach to Athabasca), upload the HTML to R2 and provide the public URL:
 
 ```bash
-cd /home/nrsimha/Sites/athabasca
+cd ${ATHABASCA_SITES:-$HOME/Sites}/athabasca
 bun run scripts/upload-to-r2.ts "/path/to/prompt-kit.html" --key "gly/briefs/scene-X-prompt-kit-vN.html"
 ```
 
